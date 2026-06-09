@@ -252,24 +252,24 @@
 
 #skillInstitutesBtn{
   border:none;
-  padding:11px 16px;
+  padding:13px 20px;
   border-radius:999px;
-  background:#bebe7b;
+  background:#ffffff;
   color:#122345;
-  font-size:.82rem;
+  font-size:.95rem;
   font-weight:600;
   cursor:pointer;
-  box-shadow: 0 6px 16px rgba(190,190,123,.35);
+  box-shadow: 0 10px 24px rgba(0,0,0,.14);
   z-index:10;
   transition:.2s ease;
   width:160px;
   text-align:center;
-  line-height:1.3;
 }
 
 #skillInstitutesBtn:hover{
+  background:#bebe7b;
   transform:scale(1.03);
-  box-shadow: 0 10px 22px rgba(190,190,123,.45);
+  box-shadow: 0 14px 28px rgba(190,190,123,.3);
 }
 
 /* PRICING CALCULATOR */
@@ -301,6 +301,8 @@
 .calcLeft.borderBoth{
   border-top:8px solid transparent;
   border-image: linear-gradient(to right, #bebe7b 50%, #122345 50%) 1;
+  border-top-left-radius:0;
+  border-top-right-radius:0;
 }
 
 .calcRight{
@@ -895,6 +897,70 @@
     height:auto;
     padding:12px 0;
   }
+}
+
+/* CIRCLE CHECKBOXES (non-card toggles only) */
+.toggleRow > input[type="checkbox"]{
+  appearance:none;
+  -webkit-appearance:none;
+  width:20px;
+  height:20px;
+  min-width:20px;
+  border-radius:50%;
+  border:2.5px solid rgba(18,35,69,.25);
+  background:white;
+  cursor:pointer;
+  position:relative;
+  flex-shrink:0;
+  transition:.15s ease;
+}
+
+.toggleRow > input[type="checkbox"]:hover{
+  border-color:#122345;
+}
+
+.toggleRow > input[type="checkbox"]:checked{
+  background:#122345;
+  border-color:#122345;
+  box-shadow:0 2px 8px rgba(18,35,69,.25);
+}
+
+.toggleRow > input[type="checkbox"]:checked::after{
+  content:'';
+  position:absolute;
+  top:2px;
+  left:5.5px;
+  width:5px;
+  height:9px;
+  border:2px solid white;
+  border-top:none;
+  border-left:none;
+  transform:rotate(45deg);
+}
+
+.toggleRow > input[type="checkbox"]:disabled{
+  opacity:.4;
+  cursor:not-allowed;
+}
+
+/* PRICE PANEL BACKGROUND IMAGE */
+.calcRight::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background-image:url('https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/69cb72e4958c43b0b1f1a1e76b2712cb.png');
+  background-size:cover;
+  background-position:center top;
+  opacity:.07;
+  pointer-events:none;
+  z-index:0;
+  overflow:hidden;
+}
+
+.calcRight > *{
+  position:relative;
+  z-index:1;
 }
 
 /* Remove checkbox mark from event toggle cards */

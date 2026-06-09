@@ -100,15 +100,30 @@ document.querySelectorAll(".skillBtn").forEach(btn => {
 ["earlyBird","student","lived","ceu","groupRegistration","groupCeus"]
   .forEach(id => document.getElementById(id).addEventListener("change", updatePrice));
 
-skillRegistration.addEventListener("change", () => {
-  if (!skillRegistration.checked && !globalRegistration.checked) globalRegistration.checked = true;
+/* ── REGISTRATION CARD CLICK LOGIC ── */
+/* Clicking the active-only card does nothing.
+   Clicking an inactive card adds it.
+   Clicking an active card when both are on removes it. */
+document.querySelector(".globalToggle").addEventListener("click", e => {
+  e.preventDefault();
+  if (groupRegistration.checked) return;
+  const g = globalRegistration.checked;
+  const s = skillRegistration.checked;
+  if (g && !s) return;               // only global — no-op
+  if (g && s)  { globalRegistration.checked = false; } // both → remove global
+  if (!g)      { globalRegistration.checked = true;  } // skill only → add global
   if (globalRegistration.checked && !groupRegistration.checked) earlyBirdInput.checked = true;
   updatePrice();
 });
 
-globalRegistration.addEventListener("change", () => {
-  if (!skillRegistration.checked && !globalRegistration.checked) globalRegistration.checked = true;
-  if (globalRegistration.checked && !groupRegistration.checked) earlyBirdInput.checked = true;
+document.querySelector(".skillToggle").addEventListener("click", e => {
+  e.preventDefault();
+  if (groupRegistration.checked) return;
+  const g = globalRegistration.checked;
+  const s = skillRegistration.checked;
+  if (s && !g) return;               // only skill — no-op
+  if (s && g)  { skillRegistration.checked = false; } // both → remove skill
+  if (!s)      { skillRegistration.checked = true;  } // global only → add skill
   updatePrice();
 });
 
