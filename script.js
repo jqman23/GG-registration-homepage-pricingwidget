@@ -427,3 +427,11 @@ function updatePrice() {
 
 updatePrice();
 document.getElementById("skillCountSection").style.display = "none";
+
+function emitHeight() {
+  const height = document.getElementById("ggWidgetShell").scrollHeight;
+  window.parent.postMessage({ ggWidgetHeight: height }, "*");
+}
+
+new ResizeObserver(emitHeight).observe(document.getElementById("ggWidgetShell"));
+emitHeight();
