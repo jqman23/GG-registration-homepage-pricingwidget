@@ -308,6 +308,7 @@
 .calcRight{
   position:relative;
   border-top:8px solid rgba(18,35,69,.10);
+  overflow:hidden;
 }
 
 #pricingView .calcLabel{
@@ -955,7 +956,6 @@
   opacity:.07;
   pointer-events:none;
   z-index:0;
-  overflow:hidden;
 }
 
 .calcRight > *{
