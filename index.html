@@ -53,11 +53,8 @@
 
       <!-- CENTER -->
       <div class="centerVisual">
-
-        <button id="pricingBtn">
-          Explore Pricing
-        </button>
-
+        <button id="pricingBtn">Explore Pricing</button>
+        <button id="skillInstitutesBtn">Explore Skill Institutes</button>
       </div>
 
       <!-- DAYS 2–3 -->
@@ -105,13 +102,11 @@
 
     <div id="pricingCalculator">
 
-      <div class="calcLeft">
+      <div class="calcLeft" id="calcLeft">
 
         <div class="calcSection">
-          <div class="calcLabel">
-            Individual Registration Options
-          </div>
-          <div class="calcSubLabel">Select one or both — combining unlocks a Bundle Discount</div>
+          <div class="calcLabel">Individual Registration Options</div>
+          <div class="calcSubLabel">Select one or both — by participating in both a Skill Institute and the Global Gathering you will receive a Bundle Discount</div>
 
           <div class="toggleWrap">
 
@@ -134,48 +129,25 @@
         </div>
 
         <div class="calcSection" id="skillCountSection">
-          <div class="calcLabel">
-            Skill Institute Options
-          </div>
+          <div class="calcLabel">Skill Institute Options</div>
 
           <div class="choiceGrid skillOptionGrid" id="individualSkillOptions">
 
             <div class="skillOptionLine">
-              <button class="skillBtn active" data-count="1">
-                Half-Day • 1 Institute
-              </button>
-              <input
-                type="number"
-                id="groupHalfSkills"
-                class="miniQty skillQty"
-                min="0"
-                value="0"
-                aria-label="Number of half-day Skill Institute registrations"
-              >
+              <button class="skillBtn active" data-count="1">Half-Day • 1 Institute</button>
+              <input type="number" id="groupHalfSkills" class="miniQty skillQty" min="0" value="0" aria-label="Number of half-day Skill Institute registrations">
             </div>
 
             <div class="skillOptionLine">
-              <button class="skillBtn" data-count="2">
-                Full-Day • 2+ Institutes
-              </button>
-              <input
-                type="number"
-                id="groupFullSkills"
-                class="miniQty skillQty"
-                min="0"
-                value="0"
-                aria-label="Number of full-day Skill Institute registrations"
-              >
+              <button class="skillBtn" data-count="2">Full-Day • 2+ Institutes</button>
+              <input type="number" id="groupFullSkills" class="miniQty skillQty" min="0" value="0" aria-label="Number of full-day Skill Institute registrations">
             </div>
 
           </div>
-
         </div>
 
         <div class="calcSection">
-          <div class="calcLabel">
-            Pricing Adjustments
-          </div>
+          <div class="calcLabel">Pricing Adjustments</div>
 
           <div class="toggleWrap">
 
@@ -201,24 +173,14 @@
               <input type="checkbox" id="ceu">
               <span>Continuing Education Units (CEUs)</span>
               <span class="infoIcon" data-tooltip="Unlimited CEUs can be earned at the Global Gathering for a flat $50 fee.">i</span>
-              <input
-                type="number"
-                id="groupCeus"
-                class="miniQty ceuQty"
-                min="0"
-                max="15"
-                value="0"
-                aria-label="Number of CEU registrations"
-              >
+              <input type="number" id="groupCeus" class="miniQty ceuQty" min="0" max="15" value="0" aria-label="Number of CEU registrations">
             </label>
 
           </div>
         </div>
 
         <div class="calcSection">
-          <div class="calcLabel">
-            Group Registration
-          </div>
+          <div class="calcLabel">Group Registration</div>
 
           <label class="toggleRow groupToggleRow">
             <input type="checkbox" id="groupRegistration">
@@ -233,29 +195,39 @@
           </div>
         </div>
 
+        <div class="resetRow">
+          <button id="resetBtn">Reset to defaults</button>
+        </div>
+
       </div>
 
       <!-- RIGHT SIDE -->
       <div class="calcRight">
 
-        <button id="backBtn">
-          ← Back
-        </button>
+        <button id="backBtn">← Back</button>
 
         <div class="priceCard">
-          <div class="priceTop">
-            Estimated Individual Registration Cost
+
+          <div class="priceIcons" id="priceIcons">
+            <div class="priceIconGroup" id="iconSkillGroup">
+              <img src="https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/8230f92e454c40c49550e623915ee73e.png" alt="" class="priceIconImg">
+            </div>
+            <div class="priceIconDivider" id="iconDivider"></div>
+            <div class="priceIconGroup" id="iconGlobalGroup">
+              <img src="https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/7fa5436c0536426fa7e85842cf7aad5d.png" alt="" class="priceIconImg">
+              <img src="https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/bdcbe9d6fe544ef4a202b854ca33e3f6.png" alt="" class="priceIconImg">
+              <img src="https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/3a8caa515267422f9438e166ed096908.png" alt="" class="priceIconImg">
+              <img src="https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/70e651e949504943907244bd4cfef35e.png" alt="" class="priceIconImg">
+            </div>
           </div>
 
-          <div class="bigPrice" id="finalPrice">
-            $157.50
-          </div>
+          <div class="priceTop" id="priceTopLabel">Estimated Individual Registration Cost</div>
+
+          <div class="bigPrice" id="finalPrice">$157.50</div>
 
           <div id="tierNudge"></div>
 
-          <div class="priceBreakdown" id="priceBreakdown">
-            Global Gathering
-          </div>
+          <div class="priceBreakdown" id="priceBreakdown">Global Gathering</div>
 
           <div id="pricingNotice"></div>
         </div>
@@ -264,6 +236,14 @@
 
     </div>
 
+  </div>
+
+  <!-- SKILL INSTITUTES VIEW -->
+  <div id="skillView">
+    <button id="skillViewBackBtn">← Back</button>
+    <div class="skillViewPlaceholder">
+      Will add info about skill institutes soon
+    </div>
   </div>
 
 </div>
