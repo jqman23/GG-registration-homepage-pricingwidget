@@ -1,0 +1,892 @@
+*{
+  font-family:"Montserrat",sans-serif;
+  box-sizing:border-box;
+  -webkit-font-smoothing:antialiased;
+}
+
+#ggWidgetShell{
+  position:relative;
+  width:100%;
+  max-width:1280px;
+  margin:10px auto 20px;
+}
+
+#mainView{
+  width:100%;
+}
+
+#pricingView{
+  display:none;
+  width:100%;
+}
+
+#ggStructure{
+  width:100%;
+  padding:0 12px;
+  display:grid;
+  grid-template-columns:1fr 180px 1fr;
+  align-items:stretch;
+  gap:8px;
+}
+
+.pathCard{
+  position:relative;
+  overflow:hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.98),
+    rgba(255,255,255,.94)
+  );
+  border-radius:32px;
+  min-height:430px;
+  padding:34px 32px 34px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.10);
+}
+
+.skillCard{
+  border-top:10px solid #bebe7b;
+}
+
+.gatheringCard{
+  border-top:10px solid #122345;
+}
+
+.contentInner{
+  position:relative;
+  z-index:2;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  padding-top:42px;
+}
+
+.visualZone{
+  width:100%;
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.textZone{
+  width:100%;
+  min-height:118px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding-top:6px;
+}
+
+.skillZone,
+.gatheringZone{
+  min-height:220px;
+}
+
+.cardGlow{
+  position:absolute;
+  width:240px;
+  height:240px;
+  border-radius:50%;
+  z-index:0;
+}
+
+.sageGlow{
+  background: radial-gradient(
+    rgba(190,190,123,.18),
+    rgba(190,190,123,0)
+  );
+  top:-80px;
+  right:-60px;
+}
+
+.navyGlow{
+  background: radial-gradient(
+    rgba(24,112,137,.16),
+    rgba(24,112,137,0)
+  );
+  top:-80px;
+  right:-60px;
+}
+
+.dateWrap{
+  position:absolute;
+  top:22px;
+  left:26px;
+  z-index:5;
+}
+
+.datePill{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding:8px 16px;
+  border-radius:999px;
+  background:#bebe7b;
+  color:#122345;
+}
+
+.navyPill{
+  background:#122345;
+  color:white;
+}
+
+.pillDay{
+  font-size:.76rem;
+  font-weight:700;
+  letter-spacing:.08em;
+}
+
+.pillDate{
+  font-size:.78rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  opacity:.9;
+}
+
+.mainIcon{
+  width:170px;
+  height:170px;
+  object-fit:contain;
+}
+
+.iconCluster{
+  display:grid;
+  grid-template-columns:repeat(2,88px);
+  gap:18px;
+}
+
+.iconCluster img{
+  width:88px;
+  height:88px;
+  object-fit:contain;
+}
+
+.cardTitle{
+  width:100%;
+  font-size:2.35rem;
+  line-height:1.02;
+  letter-spacing:-0.03em;
+  font-weight:600;
+  color:#122345;
+  margin-bottom:18px;
+}
+
+.cardSub{
+  width:100%;
+  max-width:420px;
+  font-size:1rem;
+  line-height:1.55;
+  color:#000000aa;
+}
+
+.centerVisual{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.flowSvg{
+  width:100%;
+  height:240px;
+}
+
+.flowLine{
+  fill:none;
+  stroke-width:5;
+  stroke-linecap:round;
+}
+
+.sageLine{
+  stroke:#bebe7b;
+}
+
+.navyLine{
+  stroke:#122345;
+}
+
+#pricingBtn{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  border:none;
+  padding:13px 20px;
+  border-radius:999px;
+  background:#ffffff;
+  color:#122345;
+  font-size:.95rem;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow: 0 10px 24px rgba(0,0,0,.14);
+  z-index:10;
+  transition:.2s ease;
+}
+
+#pricingBtn:hover{
+  transform:translate(-50%,-50%) scale(1.03);
+}
+
+#pricingView .calcLabel{
+  margin-bottom:10px;
+}
+
+#pricingView .toggleWrap{
+  gap:11px;
+}
+
+#pricingView .eventToggle span{
+  min-height:54px;
+  padding:0 18px;
+}
+
+#pricingView .skillBtn{
+  padding:12px 15px;
+}
+
+#pricingView .miniQty{
+  padding:8px 10px;
+}
+
+#pricingView .priceTop{
+  margin-bottom:12px;
+}
+
+#pricingView .bigPrice{
+  margin-bottom:10px;
+}
+
+#pricingView .priceBreakdown{
+  line-height:1.45;
+}
+
+#pricingView #pricingNotice{
+  margin-top:12px;
+  line-height:1.45;
+}
+
+#pricingView #tierNudge{
+  margin-top:-4px;
+  margin-bottom:8px;
+}
+
+#backBtn{
+  position:absolute;
+  top:18px;
+  right:18px;
+  border:none;
+  background:#122345;
+  color:white;
+  padding:9px 14px;
+  border-radius:999px;
+  font-size:.85rem;
+  font-weight:600;
+  cursor:pointer;
+  z-index:5;
+}
+
+#pricingCalculator{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:24px;
+  padding:0 12px;
+}
+
+.calcLeft,
+.calcRight{
+  background:#ffffffee;
+  border-radius:30px;
+  padding:24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.10);
+}
+
+.calcRight{
+  position:relative;
+}
+
+.calcSection{
+  margin-bottom:24px;
+}
+
+.calcSection:first-child .toggleWrap {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.calcSection:first-child .toggleWrap .toggleRow {
+  flex: 1 1 auto;
+  min-width: 180px;
+}
+
+.bundleNotice{
+  display:none;
+  margin-top:14px;
+  font-size:.85rem;
+  line-height:1.3;
+  font-weight:600;
+  color:#122345;
+  text-align:left;
+  font-style: italic;
+}
+
+.calcLabel{
+  font-size:1rem;
+  font-weight:700;
+  color:#122345;
+  margin-bottom:14px;
+}
+
+.choiceGrid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.skillBtn{
+  border:none;
+  background:#f4f6fa;
+  color:#122345;
+  padding:14px 18px;
+  border-radius:16px;
+  font-size:.95rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.skillBtn.active{
+  background:#bebe7b;
+  color:#122345;
+}
+
+#ggWidgetShell.groupMode .skillBtn.active{
+  background:#f4f6fa;
+  color:#122345;
+}
+
+#ggWidgetShell.groupMode .skillBtn.hasQty{
+  background:#bebe7b;
+  color:#122345;
+}
+
+#ggWidgetShell.groupMode.tierSmall .bigPrice{
+  color:#b04239;
+}
+
+#ggWidgetShell.groupMode.tierMedium .bigPrice{
+  color:#f98b2c;
+}
+
+#ggWidgetShell.groupMode.tierLarge .bigPrice{
+  color:#8f8f44;
+}
+
+#ggWidgetShell:not(.groupMode) .bigPrice{
+  color:#122345;
+}
+
+.bigPrice{
+  position:relative;
+}
+
+#ggWidgetShell.showTierNudge .bigPrice::after{
+  content:"*";
+  position:absolute;
+  top:-10px;
+  right:-16px;
+  font-size:1.6rem;
+  line-height:1;
+  font-weight:700;
+  color:#831f16;
+}
+
+.toggleWrap{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.toggleRow{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:1rem;
+  color:#122345;
+  font-weight:500;
+}
+
+.toggleRow input{
+  width:18px;
+  height:18px;
+}
+
+.toggleRow input:disabled{
+  opacity:.45;
+  cursor:not-allowed;
+}
+
+.toggleRow.disabled input{
+  opacity:.45;
+  cursor:not-allowed;
+}
+
+.toggleRow.disabled{
+  cursor:not-allowed;
+  position: relative;
+  align-self: flex-start;
+  width: auto;
+}
+
+.toggleRow.disabled span{
+  opacity:.45;
+  cursor:not-allowed;
+}
+
+.toggleRow.disabled input{
+  pointer-events:none;
+}
+
+.toggleRow.disabled::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: calc(100% + 21px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: max-content;
+  max-width: 280px;
+  background: #122345;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: .82rem;
+  line-height: 1.4;
+  font-weight: 500;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
+  opacity: 0;
+  pointer-events: none;
+  transition: .2s ease;
+  z-index: 999;
+  white-space: normal;
+  text-align: left;
+}
+
+.toggleRow.disabled::before {
+  content: "";
+  position: absolute;
+  left: calc(100% + 15px);
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #122345;
+  opacity: 0;
+  transition: .2s ease;
+  z-index: 999;
+}
+
+.toggleRow.disabled:hover::after,
+.toggleRow.disabled:hover::before{
+  opacity:1;
+}
+
+.infoIcon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:20px;
+  height:20px;
+  margin-left:8px;
+  border-radius:50%;
+  background: rgba(18,35,69,.08);
+  color: #122345;
+  font-size:.78rem;
+  font-weight:700;
+  cursor:default;
+  position: relative;
+}
+
+.infoIcon::after{
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: max-content;
+  max-width: 240px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #122345;
+  color: white;
+  font-size: .8rem;
+  line-height: 1.4;
+  text-align: left;
+  white-space: normal;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+  z-index: 999;
+}
+
+.infoIcon:hover::after{
+  opacity: 1;
+  transform: translate(-50%, -110%);
+}
+
+.toggleRow.disabled .infoIcon{
+  display:none;
+}
+
+.eventToggle{
+  position:relative;
+  display:block;
+  cursor:pointer;
+}
+
+.eventToggle input{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+
+.eventToggle span{
+  position:relative;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  min-height:62px;
+  padding:0 22px;
+  border-radius:18px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.98),
+      rgba(246,248,251,.98)
+    );
+  border:2px solid rgba(18,35,69,.08);
+  color:#122345;
+  font-size:.98rem;
+  font-weight:600;
+  transition:.22s ease;
+  box-shadow:
+    0 6px 18px rgba(0,0,0,.05);
+}
+
+.eventToggle:hover span{
+  transform:translateY(-1px);
+  border-color:rgba(24,112,137,.18);
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.08);
+}
+
+.eventToggle input:checked + span{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(24,112,137,.10),
+      rgba(255,255,255,.98)
+    );
+  border-color:#187089;
+  color:#122345;
+  box-shadow:
+    0 12px 28px rgba(24,112,137,.12);
+}
+
+.eventToggle input:disabled + span{
+  opacity:.45;
+  cursor:not-allowed;
+  background:#eef1f5;
+  box-shadow:none;
+}
+
+.skillToggle input:checked + span{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(190,190,123,.10),
+      rgba(255,255,255,.98)
+    );
+  border-color:#bebe7b;
+  color:#122345;
+  box-shadow:
+    0 12px 28px rgba(190,190,123,.12);
+}
+
+.skillToggle:hover span{
+  border-color:rgba(190,190,123,.18);
+}
+
+.globalToggle input:checked + span{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(18,35,69,.10),
+      rgba(255,255,255,.98)
+    );
+  border-color:#122345;
+  color:#122345;
+  box-shadow:
+    0 12px 28px rgba(18,35,69,.12);
+}
+
+.globalToggle:hover span{
+  border-color:rgba(18,35,69,.18);
+}
+
+.priceCard{
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.priceTop{
+  font-size:1rem;
+  font-weight:700;
+  color:#122345;
+  margin-bottom:18px;
+}
+
+.bigPrice{
+  font-size:4.5rem;
+  line-height:1;
+  font-weight:700;
+  letter-spacing:-0.05em;
+  color:#122345;
+  margin-bottom:18px;
+}
+
+.priceBreakdown{
+  max-width:340px;
+  font-size:1rem;
+  line-height:1.6;
+  color:#00000088;
+}
+
+#pricingNotice{
+  margin-top:18px;
+  min-height:28px;
+  font-size:.95rem;
+  line-height:1.7;
+  font-weight:600;
+  color:#187089;
+  text-align:center;
+}
+
+#tierNudge{
+  display:none;
+  margin-top:-10px;
+  margin-bottom:10px;
+  max-width:360px;
+  padding:0;
+  background:transparent;
+  border:none;
+  color:#122345;
+  font-size:.9rem;
+  line-height:1.55;
+  font-weight:600;
+  text-align:center;
+}
+
+#tierNudge strong{
+  color:#831f16;
+  font-weight:800;
+}
+
+#ggWidgetShell.tierSmall #tierNudge strong{
+  color:#122345;
+}
+
+#ggWidgetShell.tierSmall #tierNudge{
+  color:#b04239;
+}
+
+#ggWidgetShell.tierMedium #tierNudge{
+  color:#f98b2c;
+}
+
+#ggWidgetShell.tierLarge #tierNudge{
+  color:#8f8f44;
+}
+
+.groupControls{
+  display:none;
+  margin-top:16px;
+}
+
+.rangeField{
+  gap:10px;
+  font-size:.92rem;
+  font-weight:600;
+  color:#122345;
+}
+
+.rangeField input[type="range"]{
+  width:100%;
+  cursor:pointer;
+  accent-color:#187089;
+}
+
+#ggWidgetShell.tierSmall .rangeField input[type="range"]{
+  accent-color:#b04239;
+}
+
+#ggWidgetShell.tierMedium .rangeField input[type="range"]{
+  accent-color:#f98b2c;
+}
+
+#ggWidgetShell.tierLarge .rangeField input[type="range"]{
+  accent-color:#bebe7b;
+}
+
+#ggWidgetShell.tierSmall #groupSizeValue{
+  color:#b04239;
+}
+
+#ggWidgetShell.tierMedium #groupSizeValue{
+  color:#f98b2c;
+}
+
+#ggWidgetShell.tierLarge #groupSizeValue{
+  color:#8f8f44;
+}
+
+.miniQty{
+  display:none;
+  width:72px;
+  min-width:72px;
+  padding:10px 10px;
+  border-radius:12px;
+  border:2px solid rgba(18,35,69,.12);
+  background:#ffffff;
+  color:#122345;
+  font-size:.95rem;
+  font-weight:700;
+  text-align:center;
+  outline:none;
+}
+
+.miniQty:focus{
+  border-color:#187089;
+  box-shadow:0 0 0 3px rgba(24,112,137,.12);
+}
+
+.skillOptionGrid{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.skillOptionLine{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex:1 1 220px;
+}
+
+.skillOptionLine .skillBtn{
+  flex:1;
+  min-width:0;
+}
+
+.skillOptionLine .miniQty{
+  flex:0 0 72px;
+}
+
+.groupToggleRow{
+  margin-top:0;
+}
+
+.groupToggleRow span{
+  font-weight:500;
+}
+
+#ggWidgetShell.groupMode .groupControls{
+  display:block;
+}
+
+#ggWidgetShell.groupMode .skillQty{
+  display:block;
+}
+
+#ggWidgetShell.groupMode #ceuCheckRow{
+  align-items:center;
+}
+
+#ggWidgetShell.groupMode #ceuCheckRow > span:first-of-type{
+  flex:1;
+}
+
+#ggWidgetShell.groupMode #ceu:checked ~ .ceuQty{
+  display:block;
+}
+
+.eventToggle.lockedToggle{
+  pointer-events:none;
+}
+
+.eventToggle.lockedToggle span{
+  opacity:.72;
+  cursor:not-allowed;
+}
+
+#ggWidgetShell.groupMode #ceuCheckRow{
+  justify-content:flex-start;
+}
+
+#ggWidgetShell.groupMode #ceuCheckRow > span:first-of-type{
+  flex:0 0 auto;
+}
+
+#ggWidgetShell.groupMode #ceuCheckRow .infoIcon{
+  margin-left:0;
+}
+
+#ggWidgetShell.groupMode #ceuCheckRow .ceuQty{
+  margin-left:4px;
+}
+
+@media(max-width:950px){
+  #ggStructure{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .centerVisual{
+    height:120px;
+  }
+
+  .flowSvg{
+    transform:rotate(90deg);
+    height:100%;
+  }
+}
+
+/* Remove checkbox mark from registration option cards */
+.eventToggle > input[type="checkbox"]{
+  display:none !important;
+  appearance:none !important;
+  -webkit-appearance:none !important;
+}
+
+.eventToggle > span::before,
+.eventToggle > span::after,
+.eventToggle > input[type="checkbox"]:checked + span::before,
+.eventToggle > input[type="checkbox"]:checked + span::after{
+  content:none !important;
+  display:none !important;
+  width:0 !important;
+  height:0 !important;
+  background:none !important;
+  border:none !important;
+}

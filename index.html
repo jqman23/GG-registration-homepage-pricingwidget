@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GG Registration & Pricing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="ggWidgetShell">
+
+  <!-- MAIN VIEW -->
+  <div id="mainView">
+
+    <div id="ggStructure">
+
+      <!-- DAY 1 -->
+      <div class="pathCard skillCard">
+
+        <div class="cardGlow sageGlow"></div>
+
+        <div class="dateWrap">
+          <div class="datePill">
+            <span class="pillDay">DAY 1</span>
+            <span class="pillDate">OCTOBER 6</span>
+          </div>
+        </div>
+
+        <div class="contentInner">
+
+          <div class="visualZone skillZone">
+            <img
+              class="mainIcon"
+              src="https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/8230f92e454c40c49550e623915ee73e.png"
+              alt="Skill Building Institutes icon"
+            >
+          </div>
+
+          <div class="textZone">
+            <div class="cardTitle">
+              Skill Building Institutes
+            </div>
+            <div class="cardSub">
+              3.5 hours • immersive • hands-on • extended learning
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CENTER -->
+      <div class="centerVisual">
+
+        <svg class="flowSvg" viewBox="0 0 300 220" preserveAspectRatio="none">
+          <path d="M0 40 C110 40 110 110 300 110" class="flowLine sageLine" />
+          <path d="M0 180 C110 180 110 110 300 110" class="flowLine navyLine" />
+        </svg>
+
+        <button id="pricingBtn">
+          Explore Pricing
+        </button>
+
+      </div>
+
+      <!-- DAYS 2–3 -->
+      <div class="pathCard gatheringCard">
+
+        <div class="cardGlow navyGlow"></div>
+
+        <div class="dateWrap">
+          <div class="datePill navyPill">
+            <span class="pillDay">DAYS 2–3</span>
+            <span class="pillDate">OCTOBER 7–8</span>
+          </div>
+        </div>
+
+        <div class="contentInner">
+
+          <div class="visualZone gatheringZone">
+            <div class="iconCluster">
+              <img src="https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/7fa5436c0536426fa7e85842cf7aad5d.png" alt="">
+              <img src="https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/bdcbe9d6fe544ef4a202b854ca33e3f6.png" alt="">
+              <img src="https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/3a8caa515267422f9438e166ed096908.png" alt="">
+              <img src="https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/70e651e949504943907244bd4cfef35e.png" alt="">
+            </div>
+          </div>
+
+          <div class="textZone">
+            <div class="cardTitle">
+              The Global Gathering
+            </div>
+            <div class="cardSub">
+              workshops • strategy sessions • creative spaces • keynotes
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- PRICING VIEW -->
+  <div id="pricingView">
+
+    <div id="pricingCalculator">
+
+      <div class="calcLeft">
+
+        <div class="calcSection">
+          <div class="calcLabel">
+            Individual Registration Options
+          </div>
+
+          <div class="toggleWrap">
+
+            <label class="toggleRow eventToggle globalToggle">
+              <input type="checkbox" id="globalRegistration" checked>
+              <span>Global Gathering</span>
+            </label>
+
+            <label class="toggleRow eventToggle skillToggle">
+              <input type="checkbox" id="skillRegistration">
+              <span>Skill Building Institutes</span>
+            </label>
+
+          </div>
+
+          <div id="bundleNotice" class="bundleNotice" aria-live="polite">
+            By participating in both the Global Gathering and a half or full day of Skill Building Institutes, participants receive a Bundle Discount.
+          </div>
+
+        </div>
+
+        <div class="calcSection" id="skillCountSection">
+          <div class="calcLabel">
+            Skill Institute Options
+          </div>
+
+          <div class="choiceGrid skillOptionGrid" id="individualSkillOptions">
+
+            <div class="skillOptionLine">
+              <button class="skillBtn active" data-count="1">
+                Half-Day • 1 Institute
+              </button>
+              <input
+                type="number"
+                id="groupHalfSkills"
+                class="miniQty skillQty"
+                min="0"
+                value="0"
+                aria-label="Number of half-day Skill Institute registrations"
+              >
+            </div>
+
+            <div class="skillOptionLine">
+              <button class="skillBtn" data-count="2">
+                Full-Day • 2+ Institutes
+              </button>
+              <input
+                type="number"
+                id="groupFullSkills"
+                class="miniQty skillQty"
+                min="0"
+                value="0"
+                aria-label="Number of full-day Skill Institute registrations"
+              >
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="calcSection">
+          <div class="calcLabel">
+            Pricing Adjustments
+          </div>
+
+          <div class="toggleWrap">
+
+            <label class="toggleRow">
+              <input type="checkbox" id="earlyBird" checked>
+              <span>Early Bird Discount</span>
+              <span class="infoIcon" data-tooltip="Participants have until July 31st to take advantage of the 10% Early Bird Discount.">i</span>
+            </label>
+
+            <label class="toggleRow individualOnly">
+              <input type="checkbox" id="student">
+              <span>Student Discount</span>
+              <span class="infoIcon" data-tooltip="Students are eligible for a $75 discount towards their participation in the Global Gathering.">i</span>
+            </label>
+
+            <label class="toggleRow individualOnly">
+              <input type="checkbox" id="lived">
+              <span>Lived Experience Scholarship</span>
+              <span class="infoIcon" data-tooltip="Financial scholarships are available to those who have lived experience with child protection & child welfare and for whom paying for the event would constitute a financial strain.">i</span>
+            </label>
+
+            <label class="toggleRow ceuToggleRow" id="ceuCheckRow">
+              <input type="checkbox" id="ceu">
+              <span>Continuing Education Units (CEUs)</span>
+              <span class="infoIcon" data-tooltip="Unlimited CEUs can be earned at the Global Gathering for a flat $50 fee.">i</span>
+              <input
+                type="number"
+                id="groupCeus"
+                class="miniQty ceuQty"
+                min="0"
+                max="15"
+                value="0"
+                aria-label="Number of CEU registrations"
+              >
+            </label>
+
+          </div>
+        </div>
+
+        <div class="calcSection">
+          <div class="calcLabel">
+            Group Registration
+          </div>
+
+          <label class="toggleRow groupToggleRow">
+            <input type="checkbox" id="groupRegistration">
+            <span>I'm registering a group of 10 or more</span>
+          </label>
+
+          <div id="groupControls" class="groupControls">
+            <label class="groupField rangeField">
+              <span>Group size: <strong id="groupSizeValue">10</strong></span>
+              <input type="range" id="groupSize" min="10" max="100" value="10">
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="calcRight">
+
+        <button id="backBtn">
+          ← Back
+        </button>
+
+        <div class="priceCard">
+          <div class="priceTop">
+            Estimated Individual Registration Cost
+          </div>
+
+          <div class="bigPrice" id="finalPrice">
+            $157.50
+          </div>
+
+          <div id="tierNudge"></div>
+
+          <div class="priceBreakdown" id="priceBreakdown">
+            Global Gathering
+          </div>
+
+          <div id="pricingNotice"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
