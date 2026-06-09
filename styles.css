@@ -277,14 +277,21 @@
   top:18px;
   right:18px;
   border:none;
-  background:#122345;
-  color:white;
-  padding:9px 14px;
+  background:rgba(255,255,255,.15);
+  color:rgba(255,255,255,.9);
+  padding:9px 16px;
   border-radius:999px;
-  font-size:.85rem;
+  font-size:.82rem;
   font-weight:600;
   cursor:pointer;
   z-index:5;
+  transition:.2s ease;
+  backdrop-filter:blur(4px);
+  border:1px solid rgba(255,255,255,.2);
+}
+
+#backBtn:hover{
+  background:rgba(255,255,255,.25);
 }
 
 #pricingCalculator{
@@ -302,8 +309,14 @@
   box-shadow: 0 10px 30px rgba(0,0,0,.10);
 }
 
+.calcLeft{
+  border-top:8px solid #bebe7b;
+}
+
 .calcRight{
   position:relative;
+  background: linear-gradient(160deg, #122345 0%, #1c3a6e 100%);
+  border-top:8px solid #bebe7b;
 }
 
 .calcSection{
@@ -322,15 +335,26 @@
   min-width: 180px;
 }
 
+.calcSubLabel{
+  font-size:.8rem;
+  font-weight:500;
+  color:#00000055;
+  margin-bottom:14px;
+  margin-top:-6px;
+}
+
 .bundleNotice{
   display:none;
   margin-top:14px;
-  font-size:.85rem;
-  line-height:1.3;
+  padding:10px 14px;
+  border-radius:12px;
+  background:linear-gradient(90deg, rgba(190,190,123,.15), rgba(190,190,123,.05));
+  border-left:3px solid #bebe7b;
+  font-size:.82rem;
+  line-height:1.45;
   font-weight:600;
   color:#122345;
   text-align:left;
-  font-style: italic;
 }
 
 .calcLabel{
@@ -374,19 +398,19 @@
 }
 
 #ggWidgetShell.groupMode.tierSmall .bigPrice{
-  color:#b04239;
+  color:#f4a261;
 }
 
 #ggWidgetShell.groupMode.tierMedium .bigPrice{
-  color:#f98b2c;
+  color:#f9c74f;
 }
 
 #ggWidgetShell.groupMode.tierLarge .bigPrice{
-  color:#8f8f44;
+  color:#bebe7b;
 }
 
 #ggWidgetShell:not(.groupMode) .bigPrice{
-  color:#122345;
+  color:#ffffff;
 }
 
 .bigPrice{
@@ -401,7 +425,7 @@
   font-size:1.6rem;
   line-height:1;
   font-weight:700;
-  color:#831f16;
+  color:#f4a261;
 }
 
 .toggleWrap{
@@ -650,9 +674,11 @@
 }
 
 .priceTop{
-  font-size:1rem;
+  font-size:.8rem;
   font-weight:700;
-  color:#122345;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.55);
   margin-bottom:18px;
 }
 
@@ -661,24 +687,24 @@
   line-height:1;
   font-weight:700;
   letter-spacing:-0.05em;
-  color:#122345;
+  color:#ffffff;
   margin-bottom:18px;
 }
 
 .priceBreakdown{
-  max-width:340px;
-  font-size:1rem;
+  max-width:300px;
+  font-size:.9rem;
   line-height:1.6;
-  color:#00000088;
+  color:rgba(255,255,255,.55);
 }
 
 #pricingNotice{
   margin-top:18px;
   min-height:28px;
-  font-size:.95rem;
+  font-size:.88rem;
   line-height:1.7;
   font-weight:600;
-  color:#187089;
+  color:#bebe7b;
   text-align:center;
 }
 
@@ -690,7 +716,7 @@
   padding:0;
   background:transparent;
   border:none;
-  color:#122345;
+  color:rgba(255,255,255,.75);
   font-size:.9rem;
   line-height:1.55;
   font-weight:600;
@@ -698,24 +724,24 @@
 }
 
 #tierNudge strong{
-  color:#831f16;
+  color:#f4a261;
   font-weight:800;
 }
 
 #ggWidgetShell.tierSmall #tierNudge strong{
-  color:#122345;
+  color:#f4a261;
 }
 
 #ggWidgetShell.tierSmall #tierNudge{
-  color:#b04239;
+  color:rgba(255,255,255,.75);
 }
 
 #ggWidgetShell.tierMedium #tierNudge{
-  color:#f98b2c;
+  color:rgba(255,255,255,.75);
 }
 
 #ggWidgetShell.tierLarge #tierNudge{
-  color:#8f8f44;
+  color:rgba(255,255,255,.75);
 }
 
 .groupControls{
