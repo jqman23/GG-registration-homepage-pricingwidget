@@ -495,21 +495,9 @@
 
 .calcLeft.borderBoth{
   border-top:8px solid transparent;
-}
-
-/* Pseudo-element renders the split gradient directly over the transparent border area,
-   with its own border-radius so corners stay rounded */
-.calcLeft.borderBoth::before{
-  content:'';
-  position:absolute;
-  top:-8px;
-  left:0;
-  right:0;
-  height:8px;
-  background:linear-gradient(to right, #bebe7b 50%, #122345 50%);
-  border-radius:30px 30px 0 0;
-  pointer-events:none;
-  z-index:1;
+  background:
+    linear-gradient(#ffffffee, #ffffffee) padding-box,
+    linear-gradient(to right, #bebe7b 50%, #122345 50%) border-box;
 }
 
 .calcRight{
