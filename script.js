@@ -516,7 +516,7 @@ function openInstitute(i, tile) {
     <div class="siSpeaker">
       <img class="siSpeakerImg" src="${s.photo || 'https://placehold.co/64x64/bebe7b/122345?text=' + s.initials}" alt="${s.name}">
       <div><div class="siSpeakerName">${s.name}</div>${s.org ? `<div class="siSpeakerOrg">${s.org}</div>` : ''}</div>
-      ${(s.title || s.bio) ? `<div class="siSpeakerTooltip">${s.title ? `<div class="siSpeakerTooltipTitle">${s.title}</div>` : ''}${s.bio ? `<div class="siSpeakerTooltipBio">${s.bio}</div>` : ''}</div>` : ''}
+      ${(s.title || s.org || s.bio) ? `<div class="siSpeakerTooltip">${s.title ? `<div class="siSpeakerTooltipTitle">${s.title}</div>` : ''}${s.org ? `<div class="siSpeakerTooltipOrg">${s.org}</div>` : ''}${s.bio ? `<div class="siSpeakerTooltipBio">${s.bio}</div>` : ''}</div>` : ''}
     </div>`).join('');
   const takeawayHTML = inst.takeaways.map(t => `<li>${t}</li>`).join('');
   siDetail.innerHTML = `

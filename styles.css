@@ -285,7 +285,15 @@
   font-weight:700;
   color:#122345;
   line-height:1.35;
-  margin-bottom:5px;
+  margin-bottom:2px;
+}
+.siSpeakerTooltipOrg{
+  font-size:.63rem;
+  font-weight:600;
+  color:#6b6b2a;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  margin-bottom:6px;
 }
 .siSpeakerTooltipBio{
   font-size:.68rem;
