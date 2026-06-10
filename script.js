@@ -419,10 +419,10 @@ const institutes = [
   {
     time:"7:00 – 10:30 AM",
     fullTitle:"The Space Between Intention and Impact: A Professional Dangerousness Training",
-    presenter:"Brëanna McMullen, IMH-E® · PD Collective",
+    presenter:"Jessica Hoeper, MSW, LISW, IMH-E® & Brëanna McMullen, IMH-E®",
     desc:"Explore how well-meaning practice can become dangerous — and build a grounded, personal framework for recognizing and interrupting professional dangerousness across individual, team, and systemic levels.",
     takeaways:["Define professional dangerousness with real-world examples","Recognize PD across individual, team, and systemic levels","Apply the Self+ framework: Awareness, Reflection, Compassion, Care, Growth","Identify concrete next steps for practice and organizations"],
-    speakers:[{initials:"BM",name:"Brëanna McMullen, IMH-E®",org:"PD Collective"}]
+    speakers:[{initials:"JH",name:"Jessica Hoeper, MSW, LISW, IMH-E®",org:"Ray of HOPE, LLC"},{initials:"BM",name:"Brëanna McMullen, IMH-E®",org:"McMullen Consulting, LLC"}]
   },
   {
     time:"9:00 AM – 12:30 PM",
@@ -459,7 +459,7 @@ const institutes = [
   {
     time:"11:00 AM – 2:30 PM",
     fullTitle:"Train Your Brain for Better Work: Practical Mindfulness That Sticks",
-    presenter:"Stacey Moss, JD, CWLS, PMP® · Public Knowledge",
+    presenter:"Stacey Moss, Tracy Malone & Jude Louissaint · Public Knowledge",
     desc:"Organizational mindfulness as a performance tool, not a wellness trend. Build practical skills to manage stress, improve focus, and strengthen interpersonal effectiveness. Designed for leaders, managers, and supervisors.",
     takeaways:["Interrupt automatic reactions and return to conscious awareness","Shift attention to the present moment under pressure","Decenter from reactive thoughts without suppressing them","Build a daily informal mindfulness practice for the workplace"],
     speakers:[{initials:"SM",name:"Stacey Moss, JD, CWLS, PMP®",org:"Public Knowledge"},{initials:"TM",name:"Tracy Malone",org:"Public Knowledge"},{initials:"JL",name:"Jude Louissaint",org:"Public Knowledge"}]
