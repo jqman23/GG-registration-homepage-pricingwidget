@@ -266,9 +266,9 @@
 .siSpeakerTooltip{
   position:absolute;
   bottom:calc(100% + 8px);
-  left:0;
+  right:0;
   min-width:220px;
-  max-width:270px;
+  max-width:260px;
   background:#fff;
   border:1.5px solid #bebe7b;
   border-radius:10px;
@@ -281,10 +281,10 @@
 }
 .siSpeaker:hover .siSpeakerTooltip{ opacity:1; }
 .siSpeakerTooltipTitle{
-  font-size:.68rem;
-  font-weight:600;
-  color:rgba(18,35,69,.55);
-  line-height:1.3;
+  font-size:.69rem;
+  font-weight:700;
+  color:#122345;
+  line-height:1.35;
   margin-bottom:5px;
 }
 .siSpeakerTooltipBio{
