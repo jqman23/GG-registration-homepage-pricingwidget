@@ -260,6 +260,38 @@
   display:flex;
   align-items:center;
   gap:7px;
+  position:relative;
+  cursor:default;
+}
+.siSpeakerTooltip{
+  position:absolute;
+  bottom:calc(100% + 8px);
+  left:0;
+  min-width:220px;
+  max-width:270px;
+  background:#fff;
+  border:1.5px solid #bebe7b;
+  border-radius:10px;
+  padding:10px 12px;
+  box-shadow:0 8px 24px rgba(18,35,69,.16);
+  z-index:200;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .15s ease;
+}
+.siSpeaker:hover .siSpeakerTooltip{ opacity:1; }
+.siSpeakerTooltipTitle{
+  font-size:.68rem;
+  font-weight:600;
+  color:rgba(18,35,69,.55);
+  line-height:1.3;
+  margin-bottom:5px;
+}
+.siSpeakerTooltipBio{
+  font-size:.68rem;
+  font-weight:500;
+  color:rgba(18,35,69,.72);
+  line-height:1.45;
 }
 .siSpeakerImg{
   width:34px; height:34px;
