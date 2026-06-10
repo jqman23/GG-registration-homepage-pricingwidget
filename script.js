@@ -285,8 +285,8 @@ function updatePrice() {
     groupSizeValue.textContent = groupSize;
     shell.classList.remove("tierSmall", "tierMedium", "tierLarge");
 
-    if (groupSize >= 40)      shell.classList.add("tierLarge");
-    else if (groupSize >= 20) shell.classList.add("tierMedium");
+    if (groupSize >= 50)      shell.classList.add("tierLarge");
+    else if (groupSize >= 30) shell.classList.add("tierMedium");
     else                      shell.classList.add("tierSmall");
 
     const halfSkills = clampNumber(groupHalfSkillsInput, 0, groupSize);
@@ -299,20 +299,20 @@ function updatePrice() {
       .classList.toggle("hasQty", fullSkills > 0);
 
     let groupRate = 150;
-    if (groupSize >= 40)      groupRate = 90;
-    else if (groupSize >= 20) groupRate = 120;
+    if      (groupSize >= 50) groupRate = 90;
+    else if (groupSize >= 40) groupRate = 105;
+    else if (groupSize >= 30) groupRate = 120;
+    else if (groupSize >= 20) groupRate = 135;
 
     const globalSubtotal = groupSize * groupRate;
     price = globalSubtotal;
     text  = `${groupSize} Global Gathering registrations at $${groupRate} each`;
 
-    if (groupSize >= 16 && groupSize <= 19) {
-      tierNudge.innerHTML = `Adding just <strong>${20 - groupSize}</strong> more registrant${20 - groupSize === 1 ? "" : "s"} lowers your per-person cost.`;
-      tierNudge.style.display = "block";
-      shell.classList.add("showTierNudge");
-    }
-    if (groupSize >= 30 && groupSize <= 39) {
-      tierNudge.innerHTML = `Adding just <strong>${40 - groupSize}</strong> more registrant${40 - groupSize === 1 ? "" : "s"} lowers your per-person cost.`;
+    const nudgeThresholds = [20, 30, 40, 50];
+    const nextTier = nudgeThresholds.find(t => groupSize < t);
+    if (nextTier && nextTier - groupSize <= 4) {
+      const diff = nextTier - groupSize;
+      tierNudge.innerHTML = `Adding just <strong>${diff}</strong> more registrant${diff === 1 ? "" : "s"} lowers your per-person cost.`;
       tierNudge.style.display = "block";
       shell.classList.add("showTierNudge");
     }
@@ -401,7 +401,7 @@ function updatePrice() {
 /* ── SKILL INSTITUTES DATA + TILES ── */
 const institutes = [
   {
-    time:"3:00 – 6:30 AM",
+    time:"3:00 AM – 6:30 AM MDT",
     fullTitle:"Family Group Decision Making: Practice Skills for Social Workers and Coordinators",
     presenter:"Paul Nixon",
     desc:"A hands-on skills session for practitioners facilitating or contributing to Family Group Decision Making — from referral negotiation to collaborative agreement development.",
@@ -409,7 +409,7 @@ const institutes = [
     speakers:[{initials:"PN",name:"Paul Nixon",org:"Edinburgh, Scotland",title:"Independent Social Worker & International Consultant",bio:"International expert with 34+ years in child protection, Family Group Conferences, and leadership; former Chief Social Worker for the Government of New Zealand. Consults with governments, NGOs, and universities across six continents.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/c85b4588d3f04f03af1ff97dcf7c5214.png"}]
   },
   {
-    time:"7:00 – 10:30 AM",
+    time:"7:00 AM – 10:30 AM MDT",
     fullTitle:"Amplifying Unheard Voices: Practical Skills for Power-Sharing and Lived Expertise in Child Welfare",
     presenter:"Sharon Inglis · Circles",
     desc:"Develop practical facilitation skills for power-sharing and lived expertise in child welfare. Practice facilitation moves that shift from professional discourse to shared dialogue and amplify unheard voices.",
@@ -417,7 +417,7 @@ const institutes = [
     speakers:[{initials:"SI",name:"Sharon Inglis",org:"Circles Training & Consultancy",title:"Director",bio:"25+ years specializing in family group conferences and restorative approaches. Supports children's services in making the shift from procedural practice to true partnership.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/fb537cda9e16421abe5e3946c5057638.jpg"}]
   },
   {
-    time:"7:00 – 10:30 AM",
+    time:"7:00 AM – 10:30 AM MDT",
     fullTitle:"The Space Between Intention and Impact: A Professional Dangerousness Training",
     presenter:"Jessica Hoeper, MSW, LISW, IMH-E® & Brëanna McMullen, IMH-E®",
     desc:"Explore how well-meaning practice can become dangerous — and build a grounded, personal framework for recognizing and interrupting professional dangerousness across individual, team, and systemic levels.",
@@ -425,7 +425,7 @@ const institutes = [
     speakers:[{initials:"JH",name:"Jessica Hoeper, MSW, LISW, IMH-E®",org:"Ray of HOPE, LLC",title:"Consultant | Reflective Practice Coach | Trainer",bio:"Co-founder of the PD Collective, bringing lived experience and reflective consultation to training on Professional Dangerousness. Creates honest, actionable learning spaces rooted in human services practice.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/5accc76ba6ec49db8182e06fc9c81347.png"},{initials:"BM",name:"Brëanna McMullen, IMH-E®",org:"McMullen Consulting, LLC",title:"Speaker | Trainer | Reflective Coach & Consultant",bio:"Co-founder of the PD Collective alongside Jessica Hoeper, guiding communities in recognizing and transforming Professional Dangerousness through humor, compassion, and sustainable change.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/5accc76ba6ec49db8182e06fc9c81347.png"}]
   },
   {
-    time:"9:00 AM – 12:30 PM",
+    time:"9:00 AM – 12:30 PM MDT",
     fullTitle:"From Engagement to Power: Practicing Ethical, Lived-Experience-Led Change",
     presenter:"Valerie Frost",
     desc:"Move beyond consultation toward co-creation. Examine how well-intentioned engagement can unintentionally replicate harm — and redesign it around shared authority, informed consent, and lived-experience leadership.",
@@ -433,7 +433,7 @@ const institutes = [
     speakers:[{initials:"VF",name:"Valerie Frost, MAEd",org:"",title:"Speaker, Trainer & Advocate",bio:"Dynamic trainer and advocate with firsthand experience navigating child welfare as a parent and a decade in early childhood education. Believes gaps in well-being are opportunities for support — not risks.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/606d3b0edcdc4e16a02afda9d4ea3e23.jpg"}]
   },
   {
-    time:"9:00 AM – 12:30 PM",
+    time:"9:00 AM – 12:30 PM MDT",
     fullTitle:"The Weight of the Gold Standard: Navigating the Intricacies of Kinship Care with Relational Intelligence",
     presenter:"Michelle Mares, PCC, CPCC",
     desc:"Kinship care is not automatically a remedy. Navigate its hidden complexities — loyalty conflicts, attachment patterns, and relational strain — with relational intelligence and trauma-informed practice.",
@@ -441,7 +441,7 @@ const institutes = [
     speakers:[{initials:"MM",name:"Michelle Mares, PCC, CPCC",org:"Kempe Center / CRR Global",title:"Faculty, Kempe Center (CU Anschutz) · International Systems Coach",bio:"28+ years at the intersection of neurobiology and organizational health; leads Colorado's statewide Foster, Kin, and Adoptive Parent Training. A former foster parent and trained TBRI Practitioner.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/a3e21ea156c249bbbb07aab7866420c5.jpg"}]
   },
   {
-    time:"9:00 AM – 12:30 PM",
+    time:"9:00 AM – 12:30 PM MDT",
     fullTitle:"Curiosity Is Key: Leading Change in a Compliance Driven Culture",
     presenter:"Mark Durgin, Barb Putnam & Ellen Kagen · Kagen Leadership Group",
     desc:"An immersive, practice-based introduction to the Coach Approach to Adaptive Leadership — building the skills, mindset, and relational practices that drive real system change in compliance-heavy environments.",
@@ -449,7 +449,7 @@ const institutes = [
     speakers:[{initials:"MD",name:"Mark Durgin",org:"Kagen Leadership Group",title:"National Coordinator",bio:"20+ years transforming organizations through adaptive leadership coaching, including a $23M behavioral health systems initiative. Has guided 2,500+ professionals in cross-sector communication and systemic problem-solving.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/1911c1220e974a53a533087beb213e95.png"},{initials:"BP",name:"Barb Putnam",org:"Kagen Leadership Group",title:"Associate · BASW, MSW, LICSW, CMHS",bio:"Leader in Washington State's System of Care since 1987, spanning community mental health and statewide children's services. Certified Coach Approach for Adaptive Leadership trainer.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/92a9464813d54b3189fc61fa94b2ff0e.jpg"},{initials:"EK",name:"Ellen Kagen, MSW, PCC",org:"Kagen Leadership Group / Georgetown University",title:"Assistant Professor; Founder, Georgetown Leadership Academy",bio:"Creator of the Transformation Facilitation coaching model with curriculum adapted across 30+ states covering Adaptive Leadership, Cultural Competence, and Systems Change.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/a9768e31b09a4054839a72b5dbce699d.png"}]
   },
   {
-    time:"11:00 AM – 2:30 PM",
+    time:"11:00 AM – 2:30 PM MDT",
     fullTitle:"Working Relationally: Strengthening Families, Networks, and Hope",
     presenter:"Dan Martin · Daniel Martin Consulting",
     desc:"Move beyond transactions to build relationships that last. Strengthen family and community networks, restore hope, and create meaningful change through deeply relational practice.",
@@ -457,7 +457,7 @@ const institutes = [
     speakers:[{initials:"DM",name:"Dan Martin",org:"Daniel Martin Consulting",title:"Director",bio:"Developer of the HEERO Model for resilience, belonging, and healing, with 30+ years in child welfare, mental health, and addictions across four Canadian agencies. Trains practitioners across North America and internationally.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/20efd7dd23744a78b7eeb2f76056a761.png"}]
   },
   {
-    time:"11:00 AM – 2:30 PM",
+    time:"11:00 AM – 2:30 PM MDT",
     fullTitle:"Train Your Brain for Better Work: Practical Mindfulness That Sticks",
     presenter:"Stacey Moss, Tracy Malone & Jude Louissaint · Public Knowledge",
     desc:"Organizational mindfulness as a performance tool, not a wellness trend. Build practical skills to manage stress, improve focus, and strengthen interpersonal effectiveness. Designed for leaders, managers, and supervisors.",
@@ -465,7 +465,7 @@ const institutes = [
     speakers:[{initials:"SM",name:"Stacey Moss, JD, CWLS, PMP®",org:"Public Knowledge®",title:"President & CEO",bio:"25+ years across government, legal, and nonprofit sectors; Child Welfare Law Specialist leading system transformation nationwide. Leads the Public Knowledge IMPACT Leadership Program.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/a0b234bb70834f66aedb516198806f4b.jpg"},{initials:"TM",name:"Tracy Malone",org:"Public Knowledge®",title:"Senior Consultant · MSW, Prosci® Certified",bio:"28 years in public child welfare from frontline worker to statewide director, specializing in child welfare reform and continuous quality improvement.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/1674b55b6c684eda8785ab18030738e1.jpg"},{initials:"JL",name:"Jude Louissaint",org:"Public Knowledge®",title:"Management Consultant · MSW, ICF Certified Master Coach",bio:"30+ years across local, state, and federal child welfare, including Director of Field Operations at NYC's Administration for Children's Services. Specializes in leadership development and systems change.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/08aa9a7aa0094bfeb36a4a41be2f5617.jpg"}]
   },
   {
-    time:"1:00 – 4:30 PM",
+    time:"1:00 PM – 4:30 PM MDT",
     fullTitle:"Relational Family Finding, Network-Building, and Conflict Facilitation",
     presenter:"Elizabeth Wendel, MSW, LSW · Pale Blue",
     desc:"Go beyond database searches to find and engage the people around families — relationally. Practice building networks, navigating personal bias, and welcoming constructive conflict in family meetings.",
@@ -473,7 +473,7 @@ const institutes = [
     speakers:[{initials:"EW",name:"Elizabeth Wendel, MSW, LSW",org:"Pale Blue",title:"Co-Founder & President",bio:"Co-author of Family Finding® and Family Seeing®; her team linked 10,000+ young people to 26,000+ lasting supports. Teaches one truth: connection is the most powerful intervention we have.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/8000a49cebfc454c9fb103b9d946b2c9.jpg"}]
   },
   {
-    time:"1:00 – 4:30 PM",
+    time:"1:00 PM – 4:30 PM MDT",
     fullTitle:"Strengthening Families: Turning Protective Factors into Action",
     presenter:"Colleen Gibley-Reed · Strengthening Families",
     desc:"Build family strengths from the inside out. Explore the five Protective Factors framework and translate research-backed principles into practical, everyday interventions.",
@@ -481,7 +481,7 @@ const institutes = [
     speakers:[{initials:"CG",name:"Colleen Gibley-Reed",org:"Illuminate Colorado",title:"Director of Education",bio:"Former Kempe Center Faculty Instructor with 19 years in Larimer County child welfare. Leads education programming at Illuminate Colorado, equipping practitioners to help families thrive.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/f44828c03f9949b4b8725f7f99745154.jpg"}]
   },
   {
-    time:"7:00 – 10:30 PM",
+    time:"7:00 PM – 10:30 PM MDT",
     fullTitle:"Belonging-focused Foster Care",
     presenter:"Andrew Turnell & Anna Stromberg · Born to Belong",
     desc:"A practical, belonging-focused vision for transforming foster care by bringing carers, parents, and extended family together to work collaboratively — grounded in real case examples where fostering has been a true collaboration.",
