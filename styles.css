@@ -517,7 +517,7 @@
 .calcLeft.borderBoth{
   border-top:8px solid transparent;
   background:
-    linear-gradient(#ffffffee, #ffffffee) padding-box,
+    linear-gradient(#ffffff, #ffffff) padding-box,
     linear-gradient(to right, #bebe7b 50%, #122345 50%) border-box;
 }
 
