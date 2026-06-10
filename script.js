@@ -103,24 +103,31 @@ document.querySelectorAll(".skillBtn").forEach(btn => {
 /* ── REGISTRATION CARD TOGGLE LOGIC ── */
 /* mousedown blocks the no-op case before the browser can toggle the checkbox.
    change handles all valid state transitions. */
-document.querySelector(".globalToggle").addEventListener("mousedown", e => {
-  if (!groupRegistration.checked && globalRegistration.checked && !skillRegistration.checked) {
-    e.preventDefault(); // only global selected — block deselect
+globalRegistration.addEventListener("click", () => {
+  if (groupRegistration.checked) return;
+  // checked now reflects the NEW state after the click
+  if (!globalRegistration.checked && !skillRegistration.checked) {
+    // would leave nothing selected — block
+    globalRegistration.checked = true;
+  } else if (!globalRegistration.checked && skillRegistration.checked) {
+    // both were selected, clicked gathering → keep only gathering
+    globalRegistration.checked = true;
+    skillRegistration.checked = false;
   }
-});
-
-document.querySelector(".skillToggle").addEventListener("mousedown", e => {
-  if (!groupRegistration.checked && skillRegistration.checked && !globalRegistration.checked) {
-    e.preventDefault(); // only skill selected — block deselect
-  }
-});
-
-globalRegistration.addEventListener("change", () => {
-  if (globalRegistration.checked && !groupRegistration.checked) earlyBirdInput.checked = true;
+  if (globalRegistration.checked) earlyBirdInput.checked = true;
   updatePrice();
 });
 
-skillRegistration.addEventListener("change", () => {
+skillRegistration.addEventListener("click", () => {
+  if (groupRegistration.checked) return;
+  if (!skillRegistration.checked && !globalRegistration.checked) {
+    // would leave nothing selected — block
+    skillRegistration.checked = true;
+  } else if (!skillRegistration.checked && globalRegistration.checked) {
+    // both were selected, clicked skill → keep only skill
+    skillRegistration.checked = true;
+    globalRegistration.checked = false;
+  }
   updatePrice();
 });
 
