@@ -131,9 +131,9 @@
 
 .siTileTime{
   font-size:.62rem;
-  font-weight:600;
+  font-weight:700;
   letter-spacing:.04em;
-  color:#bebe7b;
+  color:#6b6b2a;
   margin-bottom:5px;
 }
 .siTileTitle{
@@ -183,10 +183,10 @@
 }
 .siDetailTime{
   font-size:.65rem;
-  font-weight:600;
+  font-weight:700;
   letter-spacing:.05em;
   text-transform:uppercase;
-  color:#bebe7b;
+  color:#6b6b2a;
   margin-bottom:4px;
 }
 .siDetailTitle{
