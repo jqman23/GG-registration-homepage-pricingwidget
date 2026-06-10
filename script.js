@@ -441,6 +441,14 @@ const institutes = [
     speakers:[{initials:"MM",name:"Michelle Mares, PCC, CPCC",org:""}]
   },
   {
+    time:"9:00 AM – 12:30 PM",
+    fullTitle:"Curiosity Is Key: Leading Change in a Compliance Driven Culture",
+    presenter:"Mark Durgin · Keystone Leadership Coaching",
+    desc:"An immersive, practice-based introduction to the Coach Approach to Adaptive Leadership — building the skills, mindset, and relational practices that drive real system change in compliance-heavy environments.",
+    takeaways:["Practice asking better questions and staying curious before moving to solution","Apply the Coach Approach to an adaptive challenge in your own system","Use values-based decision-making and adaptive challenge identification","Identify one adaptive challenge and commit to doing something differently starting Monday"],
+    speakers:[{initials:"MD",name:"Mark Durgin",org:"Keystone Leadership Coaching"}]
+  },
+  {
     time:"11:00 AM – 2:30 PM",
     fullTitle:"Working Relationally: Strengthening Families, Networks, and Hope",
     presenter:"Dan Martin · Daniel Martin Consulting",
@@ -471,6 +479,14 @@ const institutes = [
     desc:"Build family strengths from the inside out. Explore the five Protective Factors framework and translate research-backed principles into practical, everyday interventions.",
     takeaways:["Apply protective factors in direct practice","Use strengths-based assessment and engagement tools","Shift from problem-focus to family resilience","Co-create individualized action plans with families"],
     speakers:[{initials:"CG",name:"Colleen Gibley-Reed",org:"Strengthening Families"}]
+  },
+  {
+    time:"7:00 – 10:30 PM",
+    fullTitle:"Belonging-focused Foster Care",
+    presenter:"Andrew Turnell",
+    desc:"A practical, belonging-focused vision for transforming foster care by bringing carers, parents, and extended family together to work collaboratively — grounded in real case examples where fostering has been a true collaboration.",
+    takeaways:["Explore a detailed vision of belonging-focused collaborative foster care","Practice foster care recruitment and support that enables carer-family partnership","Develop carer and family collaboration practices through case-based exercises","Envision revised family time and initial placement activities that prioritize connection"],
+    speakers:[{initials:"AT",name:"Andrew Turnell",org:""}]
   }
 ];
 
