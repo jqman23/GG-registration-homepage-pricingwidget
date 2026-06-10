@@ -59,6 +59,200 @@
   background:#1c3a6e;
 }
 
+/* ── Skill Institutes View ─────────────────────────────── */
+.siHeader{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:22px 4px 8px;
+  margin-bottom:4px;
+}
+.siHeaderIcon{
+  width:44px;
+  height:44px;
+  object-fit:contain;
+  flex-shrink:0;
+}
+.siHeaderTitle{
+  font-size:1.25rem;
+  font-weight:700;
+  color:#122345;
+  letter-spacing:-.01em;
+  line-height:1.2;
+}
+.siHeaderSub{
+  font-size:.78rem;
+  font-weight:500;
+  color:#bebe7b;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  margin-top:3px;
+}
+
+.siList{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  padding-bottom:24px;
+}
+
+.siCard{
+  background:#fff;
+  border-radius:14px;
+  border:1.5px solid rgba(18,35,69,.1);
+  overflow:hidden;
+  transition:box-shadow .2s ease, border-color .2s ease;
+}
+.siCard:hover{
+  box-shadow:0 6px 20px rgba(18,35,69,.1);
+  border-color:rgba(190,190,123,.5);
+}
+
+.siCardHead{
+  width:100%;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px 16px;
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  text-align:left;
+  transition:background .15s ease;
+}
+.siCardHead:hover{
+  background:rgba(190,190,123,.07);
+}
+
+.siCardMeta{
+  flex:1;
+  min-width:0;
+}
+
+.siBadge{
+  display:inline-block;
+  font-size:.67rem;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:#122345;
+  background:rgba(190,190,123,.25);
+  border:1px solid rgba(190,190,123,.5);
+  border-radius:999px;
+  padding:2px 8px;
+  margin-bottom:6px;
+}
+.siBadgeFull{
+  color:#8b5e00;
+  background:rgba(255,197,80,.2);
+  border-color:rgba(255,197,80,.6);
+}
+
+.siTitle{
+  font-size:.92rem;
+  font-weight:700;
+  color:#122345;
+  line-height:1.35;
+}
+.siPresenterLine{
+  font-size:.75rem;
+  font-weight:500;
+  color:rgba(18,35,69,.5);
+  margin-top:4px;
+}
+
+.siChevron{
+  width:20px;
+  height:20px;
+  flex-shrink:0;
+  color:rgba(18,35,69,.4);
+  margin-top:2px;
+  transition:transform .25s ease, color .2s ease;
+}
+.siCard.open .siChevron{
+  transform:rotate(180deg);
+  color:#bebe7b;
+}
+
+.siBody{
+  display:none;
+  padding:0 16px 16px;
+  border-top:1px solid rgba(190,190,123,.25);
+}
+.siCard.open .siBody{
+  display:block;
+}
+
+.siDesc{
+  font-size:.83rem;
+  font-weight:500;
+  color:rgba(18,35,69,.75);
+  line-height:1.55;
+  margin:12px 0 10px;
+}
+
+.siTakeaways{
+  list-style:none;
+  padding:0;
+  margin:0 0 14px;
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+.siTakeaways li{
+  font-size:.8rem;
+  font-weight:500;
+  color:#122345;
+  padding-left:18px;
+  position:relative;
+  line-height:1.45;
+}
+.siTakeaways li::before{
+  content:'';
+  position:absolute;
+  left:4px;
+  top:7px;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#bebe7b;
+}
+
+.siSpeakers{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:4px;
+  padding-top:12px;
+  border-top:1px solid rgba(18,35,69,.07);
+}
+.siSpeaker{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.siSpeakerImg{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid rgba(190,190,123,.5);
+  flex-shrink:0;
+}
+.siSpeakerName{
+  font-size:.78rem;
+  font-weight:700;
+  color:#122345;
+  line-height:1.2;
+}
+.siSpeakerOrg{
+  font-size:.7rem;
+  font-weight:500;
+  color:rgba(18,35,69,.45);
+  line-height:1.2;
+}
+
 #ggStructure{
   width:100%;
   padding:0 12px;

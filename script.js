@@ -398,6 +398,23 @@ function updatePrice() {
   }
 }
 
+/* ── SKILL INSTITUTES EXPAND/COLLAPSE ── */
+document.querySelectorAll(".siCard").forEach(card => {
+  const btn = card.querySelector(".siCardHead");
+  btn.addEventListener("click", () => {
+    const isOpen = card.classList.contains("open");
+    // Close all others
+    document.querySelectorAll(".siCard.open").forEach(c => {
+      c.classList.remove("open");
+      c.querySelector(".siCardHead").setAttribute("aria-expanded", "false");
+    });
+    if (!isOpen) {
+      card.classList.add("open");
+      btn.setAttribute("aria-expanded", "true");
+    }
+  });
+});
+
 /* ── INIT ── */
 updatePrice();
 document.getElementById("skillCountSection").style.display = "none";
