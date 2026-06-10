@@ -443,10 +443,10 @@ const institutes = [
   {
     time:"9:00 AM – 12:30 PM",
     fullTitle:"Curiosity Is Key: Leading Change in a Compliance Driven Culture",
-    presenter:"Mark Durgin · Keystone Leadership Coaching",
+    presenter:"Mark Durgin, Barb Putnam & Ellen Kagen · Kagen Leadership Group",
     desc:"An immersive, practice-based introduction to the Coach Approach to Adaptive Leadership — building the skills, mindset, and relational practices that drive real system change in compliance-heavy environments.",
     takeaways:["Practice asking better questions and staying curious before moving to solution","Apply the Coach Approach to an adaptive challenge in your own system","Use values-based decision-making and adaptive challenge identification","Identify one adaptive challenge and commit to doing something differently starting Monday"],
-    speakers:[{initials:"MD",name:"Mark Durgin",org:"Keystone Leadership Coaching"}]
+    speakers:[{initials:"MD",name:"Mark Durgin",org:"Kagen Leadership Group"},{initials:"BP",name:"Barb Putnam",org:"Kagen Leadership Group"},{initials:"EK",name:"Ellen Kagen",org:"Kagen Leadership Group"}]
   },
   {
     time:"11:00 AM – 2:30 PM",
@@ -483,10 +483,10 @@ const institutes = [
   {
     time:"7:00 – 10:30 PM",
     fullTitle:"Belonging-focused Foster Care",
-    presenter:"Andrew Turnell",
+    presenter:"Andrew Turnell & Anna Stromberg · Born to Belong",
     desc:"A practical, belonging-focused vision for transforming foster care by bringing carers, parents, and extended family together to work collaboratively — grounded in real case examples where fostering has been a true collaboration.",
     takeaways:["Explore a detailed vision of belonging-focused collaborative foster care","Practice foster care recruitment and support that enables carer-family partnership","Develop carer and family collaboration practices through case-based exercises","Envision revised family time and initial placement activities that prioritize connection"],
-    speakers:[{initials:"AT",name:"Andrew Turnell",org:""}]
+    speakers:[{initials:"AT",name:"Andrew Turnell",org:"Born to Belong"},{initials:"AS",name:"Anna Stromberg",org:"Sodertalje Children's Services"}]
   }
 ];
 
