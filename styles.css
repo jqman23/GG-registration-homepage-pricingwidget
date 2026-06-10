@@ -290,6 +290,7 @@
 
 /* Dynamic border — updated via JS classes */
 .calcLeft{
+  position:relative;
   border-top:8px solid #122345;
   transition:border-color .25s ease;
 }
@@ -300,9 +301,21 @@
 
 .calcLeft.borderBoth{
   border-top:8px solid transparent;
-  border-image: linear-gradient(to right, #bebe7b 50%, #122345 50%) 1;
-  border-top-left-radius:0;
-  border-top-right-radius:0;
+}
+
+/* Pseudo-element renders the split gradient directly over the transparent border area,
+   with its own border-radius so corners stay rounded */
+.calcLeft.borderBoth::before{
+  content:'';
+  position:absolute;
+  top:-8px;
+  left:0;
+  right:0;
+  height:8px;
+  background:linear-gradient(to right, #bebe7b 50%, #122345 50%);
+  border-radius:30px 30px 0 0;
+  pointer-events:none;
+  z-index:1;
 }
 
 .calcRight{
@@ -953,7 +966,7 @@
   background-image:url('https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/69cb72e4958c43b0b1f1a1e76b2712cb.png');
   background-size:cover;
   background-position:center top;
-  opacity:.07;
+  opacity:.20;
   pointer-events:none;
   z-index:0;
 }
