@@ -401,31 +401,7 @@ function updatePrice() {
 /* ── SKILL INSTITUTES DATA + TILES ── */
 const institutes = [
   {
-    num:"01", shortTitle:"Strengthening Families",
-    fullTitle:"Strengthening Families: Turning Protective Factors into Action",
-    presenter:"Colleen · Strengthening Families",
-    desc:"Build family strengths from the inside out. Explore the five Protective Factors framework and translate research-backed principles into practical, everyday interventions.",
-    takeaways:["Apply protective factors in direct practice","Use strengths-based assessment and engagement tools","Shift from problem-focus to family resilience","Co-create individualized action plans with families"],
-    speakers:[{initials:"C",name:"Colleen",org:"Strengthening Families"}]
-  },
-  {
-    num:"02", shortTitle:"Working Relationally",
-    fullTitle:"Working Relationally: Strengthening Families, Networks, and Hope",
-    presenter:"Dan Martin · Daniel Martin Consulting",
-    desc:"Move beyond transactions to build relationships that last. Strengthen family and community networks, restore hope, and create meaningful change through deeply relational practice.",
-    takeaways:["Strengthen family and community networks","Use relational tools for authentic engagement","Reconnect and rebuild disconnected family systems","Apply hope-centered, practical frameworks in daily work"],
-    speakers:[{initials:"DM",name:"Dan Martin",org:"Daniel Martin Consulting"}]
-  },
-  {
-    num:"03", shortTitle:"Kinship Care & Relational Intelligence",
-    fullTitle:"The Weight of the Gold Standard: Kinship Care & Relational Intelligence",
-    presenter:"Michelle Mares",
-    desc:"Kinship care is not automatically a remedy. Navigate its hidden complexities — loyalty conflicts, attachment patterns, and relational strain — with relational intelligence and trauma-informed practice.",
-    takeaways:["Identify hidden pitfalls and misconceptions about kinship care","Navigate competing loyalties, grief, and attachment patterns","Apply relational intelligence when engaging caregivers and families","Create an individualized action plan for stronger relational practice"],
-    speakers:[{initials:"MM",name:"Michelle Mares",org:""}]
-  },
-  {
-    num:"04", shortTitle:"Family Group Decision Making",
+    time:"3:00 – 6:30 AM",
     fullTitle:"Family Group Decision Making: Practice Skills for Social Workers and Coordinators",
     presenter:"Paul Nixon",
     desc:"A hands-on skills session for practitioners facilitating or contributing to Family Group Decision Making — from referral negotiation to collaborative agreement development.",
@@ -433,23 +409,23 @@ const institutes = [
     speakers:[{initials:"PN",name:"Paul Nixon",org:""}]
   },
   {
-    num:"05", shortTitle:"Professional Dangerousness Training",
+    time:"7:00 – 10:30 AM",
+    fullTitle:"Amplifying Unheard Voices: Practical Skills for Power-Sharing and Lived Expertise in Child Welfare",
+    presenter:"Sharon Inglis · Circles",
+    desc:"Develop practical facilitation skills for power-sharing and lived expertise in child welfare. Practice facilitation moves that shift from professional discourse to shared dialogue and amplify unheard voices.",
+    takeaways:["Use facilitation moves that shift toward shared dialogue","Amplify lived expertise and unheard voices in decision-making","Prepare families for leadership, participation, and safety","Practice respectful challenge while maintaining relationship and dignity"],
+    speakers:[{initials:"SI",name:"Sharon Inglis",org:"Circles"}]
+  },
+  {
+    time:"7:00 – 10:30 AM",
     fullTitle:"The Space Between Intention and Impact: A Professional Dangerousness Training",
-    presenter:"Jessica Hoeper & Brëanna McMullen · PD Collective",
+    presenter:"Brëanna McMullen, IMH-E® · PD Collective",
     desc:"Explore how well-meaning practice can become dangerous — and build a grounded, personal framework for recognizing and interrupting professional dangerousness across individual, team, and systemic levels.",
     takeaways:["Define professional dangerousness with real-world examples","Recognize PD across individual, team, and systemic levels","Apply the Self+ framework: Awareness, Reflection, Compassion, Care, Growth","Identify concrete next steps for practice and organizations"],
-    speakers:[{initials:"JH",name:"Jessica Hoeper",org:"PD Collective"},{initials:"BM",name:"Brëanna McMullen",org:"PD Collective"}]
+    speakers:[{initials:"BM",name:"Brëanna McMullen, IMH-E®",org:"PD Collective"}]
   },
   {
-    num:"06", shortTitle:"Practical Mindfulness That Sticks",
-    fullTitle:"Train Your Brain for Better Work: Practical Mindfulness That Sticks",
-    presenter:"Stacey Moss, Tracy Malone & Jude Louissaint · Public Knowledge",
-    desc:"Organizational mindfulness as a performance tool, not a wellness trend. Build practical skills to manage stress, improve focus, and strengthen interpersonal effectiveness. Designed for leaders, managers, and supervisors.",
-    takeaways:["Interrupt automatic reactions and return to conscious awareness","Shift attention to the present moment under pressure","Decenter from reactive thoughts without suppressing them","Build a daily informal mindfulness practice for the workplace"],
-    speakers:[{initials:"SM",name:"Stacey Moss",org:"Public Knowledge"},{initials:"TM",name:"Tracy Malone",org:"Public Knowledge"},{initials:"JL",name:"Jude Louissaint",org:"Public Knowledge"}]
-  },
-  {
-    num:"07", shortTitle:"From Engagement to Power",
+    time:"9:00 AM – 12:30 PM",
     fullTitle:"From Engagement to Power: Practicing Ethical, Lived-Experience-Led Change",
     presenter:"Valerie Frost",
     desc:"Move beyond consultation toward co-creation. Examine how well-intentioned engagement can unintentionally replicate harm — and redesign it around shared authority, informed consent, and lived-experience leadership.",
@@ -457,20 +433,44 @@ const institutes = [
     speakers:[{initials:"VF",name:"Valerie Frost",org:""}]
   },
   {
-    num:"08", shortTitle:"Family-Led Facilitation & Integrity",
-    fullTitle:"Family-Led Decision-Making Facilitation, Preparation, and Integrity",
-    presenter:"Sharon Inglis · Circles",
-    desc:"Develop practical facilitation skills for power-sharing, family leadership, and keeping family-led processes whole — from relational preparation to spotting and restoring drift when it happens.",
-    takeaways:["Use facilitation moves that shift toward shared dialogue","Prepare families for leadership, participation, and safety","Spot drift from family-led integrity and restore it without shame","Practice respectful challenge while maintaining relationship and dignity"],
-    speakers:[{initials:"SI",name:"Sharon Inglis",org:"Circles"}]
+    time:"9:00 AM – 12:30 PM",
+    fullTitle:"The Weight of the Gold Standard: Navigating the Intricacies of Kinship Care with Relational Intelligence",
+    presenter:"Michelle Mares, PCC, CPCC",
+    desc:"Kinship care is not automatically a remedy. Navigate its hidden complexities — loyalty conflicts, attachment patterns, and relational strain — with relational intelligence and trauma-informed practice.",
+    takeaways:["Identify hidden pitfalls and misconceptions about kinship care","Navigate competing loyalties, grief, and attachment patterns","Apply relational intelligence when engaging caregivers and families","Create an individualized action plan for stronger relational practice"],
+    speakers:[{initials:"MM",name:"Michelle Mares, PCC, CPCC",org:""}]
   },
   {
-    num:"09", shortTitle:"Relational Family Finding & Network-Building",
+    time:"11:00 AM – 2:30 PM",
+    fullTitle:"Working Relationally: Strengthening Families, Networks, and Hope",
+    presenter:"Dan Martin · Daniel Martin Consulting",
+    desc:"Move beyond transactions to build relationships that last. Strengthen family and community networks, restore hope, and create meaningful change through deeply relational practice.",
+    takeaways:["Strengthen family and community networks","Use relational tools for authentic engagement","Reconnect and rebuild disconnected family systems","Apply hope-centered, practical frameworks in daily work"],
+    speakers:[{initials:"DM",name:"Dan Martin",org:"Daniel Martin Consulting"}]
+  },
+  {
+    time:"11:00 AM – 2:30 PM",
+    fullTitle:"Train Your Brain for Better Work: Practical Mindfulness That Sticks",
+    presenter:"Stacey Moss, JD, CWLS, PMP® · Public Knowledge",
+    desc:"Organizational mindfulness as a performance tool, not a wellness trend. Build practical skills to manage stress, improve focus, and strengthen interpersonal effectiveness. Designed for leaders, managers, and supervisors.",
+    takeaways:["Interrupt automatic reactions and return to conscious awareness","Shift attention to the present moment under pressure","Decenter from reactive thoughts without suppressing them","Build a daily informal mindfulness practice for the workplace"],
+    speakers:[{initials:"SM",name:"Stacey Moss, JD, CWLS, PMP®",org:"Public Knowledge"},{initials:"TM",name:"Tracy Malone",org:"Public Knowledge"},{initials:"JL",name:"Jude Louissaint",org:"Public Knowledge"}]
+  },
+  {
+    time:"1:00 – 4:30 PM",
     fullTitle:"Relational Family Finding, Network-Building, and Conflict Facilitation",
-    presenter:"Elizabeth Wendel · Pale Blue",
+    presenter:"Elizabeth Wendel, MSW, LSW · Pale Blue",
     desc:"Go beyond database searches to find and engage the people around families — relationally. Practice building networks, navigating personal bias, and welcoming constructive conflict in family meetings.",
     takeaways:["Use relational search strategies beyond database lookups","Build intentional networks around birth parents, youth, and family","Reflect on personal bias and discomfort in relational engagement","Facilitate family meetings through — not around — constructive conflict"],
-    speakers:[{initials:"EW",name:"Elizabeth Wendel",org:"Pale Blue"}]
+    speakers:[{initials:"EW",name:"Elizabeth Wendel, MSW, LSW",org:"Pale Blue"}]
+  },
+  {
+    time:"1:00 – 4:30 PM",
+    fullTitle:"Strengthening Families: Turning Protective Factors into Action",
+    presenter:"Colleen Gibley-Reed · Strengthening Families",
+    desc:"Build family strengths from the inside out. Explore the five Protective Factors framework and translate research-backed principles into practical, everyday interventions.",
+    takeaways:["Apply protective factors in direct practice","Use strengths-based assessment and engagement tools","Shift from problem-focus to family resilience","Co-create individualized action plans with families"],
+    speakers:[{initials:"CG",name:"Colleen Gibley-Reed",org:"Strengthening Families"}]
   }
 ];
 
@@ -481,7 +481,7 @@ institutes.forEach((inst, i) => {
   const tile = document.createElement("div");
   tile.className = "siTile";
   tile.dataset.index = i;
-  tile.innerHTML = `<div class="siTileNum">${inst.num}</div><div class="siTileTitle">${inst.shortTitle}</div><div class="siTilePresenter">${inst.presenter}</div>`;
+  tile.innerHTML = `<div class="siTileTime">${inst.time}</div><div class="siTileTitle">${inst.fullTitle}</div><div class="siTilePresenter">${inst.presenter}</div>`;
   tile.addEventListener("click", () => openInstitute(i, tile));
   siGrid.appendChild(tile);
 });
@@ -504,7 +504,10 @@ function openInstitute(i, tile) {
   const takeawayHTML = inst.takeaways.map(t => `<li>${t}</li>`).join('');
   siDetail.innerHTML = `
     <div class="siDetailTop">
-      <div class="siDetailTitle">${inst.fullTitle}</div>
+      <div>
+        <div class="siDetailTime">Tue Oct 6 · ${inst.time} MDT</div>
+        <div class="siDetailTitle">${inst.fullTitle}</div>
+      </div>
       <button class="siDetailClose" id="siDetailClose">✕</button>
     </div>
     <div class="siDetailDesc">${inst.desc}</div>

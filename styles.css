@@ -81,9 +81,9 @@
 }
 .siHeaderSub{
   font-size:.72rem;
-  font-weight:500;
-  color:#bebe7b;
-  letter-spacing:.05em;
+  font-weight:600;
+  color:rgba(18,35,69,.55);
+  letter-spacing:.04em;
   text-transform:uppercase;
   margin-top:2px;
 }
@@ -129,10 +129,10 @@
 }
 .siTile.active::before{ opacity:1; }
 
-.siTileNum{
+.siTileTime{
   font-size:.62rem;
-  font-weight:700;
-  letter-spacing:.08em;
+  font-weight:600;
+  letter-spacing:.04em;
   color:#bebe7b;
   margin-bottom:5px;
 }
@@ -161,7 +161,8 @@
   display:none;
   background:#fff;
   border-radius:12px;
-  border:1.5px solid rgba(190,190,123,.4);
+  border:2px solid #bebe7b;
+  box-shadow:0 6px 24px rgba(190,190,123,.22);
   padding:16px 18px 14px;
   margin-bottom:16px;
   animation:siSlideIn .2s ease;
@@ -179,6 +180,14 @@
   align-items:flex-start;
   gap:10px;
   margin-bottom:8px;
+}
+.siDetailTime{
+  font-size:.65rem;
+  font-weight:600;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  color:#bebe7b;
+  margin-bottom:4px;
 }
 .siDetailTitle{
   font-size:.92rem;
