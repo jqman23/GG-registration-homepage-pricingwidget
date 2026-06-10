@@ -308,10 +308,11 @@ function updatePrice() {
     price = globalSubtotal;
     text  = `${groupSize} Global Gathering registrations at $${groupRate} each`;
 
-    const nudgeThresholds = [20, 30, 40, 50];
-    const nextTier = nudgeThresholds.find(t => groupSize < t);
-    if (nextTier && nextTier - groupSize <= 4) {
-      const diff = nextTier - groupSize;
+    // Nudge only when next tier's total is actually <= current total (break-even or cheaper)
+    const nudgeBands = [{min:18,max:19,next:20},{min:27,max:29,next:30},{min:35,max:39,next:40},{min:43,max:49,next:50}];
+    const band = nudgeBands.find(b => groupSize >= b.min && groupSize <= b.max);
+    if (band) {
+      const diff = band.next - groupSize;
       tierNudge.innerHTML = `Adding just <strong>${diff}</strong> more registrant${diff === 1 ? "" : "s"} lowers your per-person cost.`;
       tierNudge.style.display = "block";
       shell.classList.add("showTierNudge");
