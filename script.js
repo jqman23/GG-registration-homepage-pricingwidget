@@ -482,7 +482,7 @@ const institutes = [
     speakers:[{initials:"CG",name:"Colleen Gibley-Reed",org:"Illuminate Colorado",title:"Director of Education",bio:"Former Kempe Center Faculty Instructor with 19 years in Larimer County child welfare. Leads education programming at Illuminate Colorado, equipping practitioners to help families thrive.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/f44828c03f9949b4b8725f7f99745154.jpg"}]
   },
   {
-    time:"7:00 PM – 10:30 PM MDT",
+    time:"7:00 AM – 10:30 AM MDT",
     fullTitle:"Belonging-focused Foster Care",
     presenter:"Andrew Turnell & Anna Stromberg · Born to Belong",
     desc:"A practical, belonging-focused vision for transforming foster care by bringing carers, parents, and extended family together to work collaboratively — grounded in real case examples where fostering has been a true collaboration.",

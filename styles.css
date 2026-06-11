@@ -88,6 +88,14 @@
   line-height:1.5;
 }
 
+.siLearnMore{
+  color:#6b6b2a;
+  font-weight:600;
+  text-decoration:none;
+  white-space:nowrap;
+}
+.siLearnMore:hover{ text-decoration:underline; }
+
 /* Tile grid */
 .siGrid{
   display:grid;
