@@ -816,7 +816,7 @@
 }
 
 /* Group tier colors */
-#ggWidgetShell.groupMode.tierSmall .bigPrice{ color:#b04239; }
+#ggWidgetShell.groupMode.tierSmall .bigPrice{ color:#187089; }
 #ggWidgetShell.groupMode.tierMedium .bigPrice{ color:#c47a1e; }
 #ggWidgetShell.groupMode.tierLarge .bigPrice{ color:#6b6b30; }
 #ggWidgetShell:not(.groupMode) .bigPrice{ color:#122345; }
@@ -1097,11 +1097,11 @@
   accent-color:#187089;
 }
 
-#ggWidgetShell.tierSmall .rangeField input[type="range"]{ accent-color:#b04239; }
+#ggWidgetShell.tierSmall .rangeField input[type="range"]{ accent-color:#187089; }
 #ggWidgetShell.tierMedium .rangeField input[type="range"]{ accent-color:#c47a1e; }
 #ggWidgetShell.tierLarge .rangeField input[type="range"]{ accent-color:#6b6b30; }
 
-#ggWidgetShell.tierSmall #groupSizeValue{ color:#b04239; }
+#ggWidgetShell.tierSmall #groupSizeValue{ color:#187089; }
 #ggWidgetShell.tierMedium #groupSizeValue{ color:#c47a1e; }
 #ggWidgetShell.tierLarge #groupSizeValue{ color:#6b6b30; }
 
@@ -1157,7 +1157,7 @@
 .eventToggle.lockedToggle span{ opacity:.72; cursor:not-allowed; }
 
 /* TIER NUDGE COLORS */
-#ggWidgetShell.tierSmall #tierNudge strong{ color:#b04239; }
+#ggWidgetShell.tierSmall #tierNudge strong{ color:#187089; }
 #ggWidgetShell.tierMedium #tierNudge strong{ color:#c47a1e; }
 #ggWidgetShell.tierLarge #tierNudge strong{ color:#6b6b30; }
 
