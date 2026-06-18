@@ -467,7 +467,7 @@ const institutes = [
   },
   {
     time:"1:00 PM – 4:30 PM MDT",
-    fullTitle:"Relational Family Finding, Network-Building, and Conflict Facilitation",
+    fullTitle:"Navigating Conflict in Meeting Spaces — Regulation, Power, and Repair",
     presenter:"Elizabeth Wendel, MSW, LSW · Pale Blue",
     desc:"Go beyond database searches to find and engage the people around families — relationally. Practice building networks, navigating personal bias, and welcoming constructive conflict in family meetings.",
     takeaways:["Use relational search strategies beyond database lookups","Build intentional networks around birth parents, youth, and family","Reflect on personal bias and discomfort in relational engagement","Facilitate family meetings through — not around — constructive conflict"],
@@ -523,7 +523,7 @@ function openInstitute(i, tile) {
   siDetail.innerHTML = `
     <div class="siDetailTop">
       <div>
-        <div class="siDetailTime">Tue Oct 6 · ${inst.time} MDT</div>
+        <div class="siDetailTime">Tue Oct 6 · ${inst.time}</div>
         <div class="siDetailTitle">${inst.fullTitle}</div>
       </div>
       <button class="siDetailClose" id="siDetailClose">✕</button>
