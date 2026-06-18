@@ -426,6 +426,14 @@ const institutes = [
     speakers:[{initials:"JH",name:"Jessica Hoeper, MSW, LISW, IMH-E®",org:"Ray of HOPE, LLC",title:"Consultant | Reflective Practice Coach | Trainer",bio:"Co-founder of the PD Collective, bringing lived experience and reflective consultation to training on Professional Dangerousness. Creates honest, actionable learning spaces rooted in human services practice.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/5accc76ba6ec49db8182e06fc9c81347.png"},{initials:"BM",name:"Brëanna McMullen, IMH-E®",org:"McMullen Consulting, LLC",title:"Speaker | Trainer | Reflective Coach & Consultant",bio:"Co-founder of the PD Collective alongside Jessica Hoeper, guiding communities in recognizing and transforming Professional Dangerousness through humor, compassion, and sustainable change.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/5accc76ba6ec49db8182e06fc9c81347.png"}]
   },
   {
+    time:"7:00 AM – 10:30 AM MDT",
+    fullTitle:"Belonging-focused Foster Care",
+    presenter:"Andrew Turnell & Anna Stromberg · Born to Belong",
+    desc:"A practical, belonging-focused vision for transforming foster care by bringing carers, parents, and extended family together to work collaboratively — grounded in real case examples where fostering has been a true collaboration.",
+    takeaways:["Explore a detailed vision of belonging-focused collaborative foster care","Practice foster care recruitment and support that enables carer-family partnership","Develop carer and family collaboration practices through case-based exercises","Envision revised family time and initial placement activities that prioritize connection"],
+    speakers:[{initials:"AT",name:"Andrew Turnell, AM",org:"Born to Belong",title:"Director · Social Work Professor of Practice, Univ. of Cumbria",bio:"Principal co-creator of Signs of Safety; internationally renowned for applying safety-organised practice to statutory child protection. Currently works with agencies across England, Europe, Canada, and beyond.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/7464efdc944f405c86ac7cab697ff19c.png"},{initials:"AS",name:"Anna Stromberg",org:"Södertalje Children's Services",title:"Foster Carer & Social Worker",bio:"Social worker with extensive experience in children's services including six years in Myanmar. Has been a committed foster carer in Sweden for 15 years, partnering with parents in every placement."}]
+  },
+  {
     time:"9:00 AM – 12:30 PM MDT",
     fullTitle:"From Engagement to Power: Practicing Ethical, Lived-Experience-Led Change",
     presenter:"Valerie Frost",
@@ -481,14 +489,6 @@ const institutes = [
     takeaways:["Apply protective factors in direct practice","Use strengths-based assessment and engagement tools","Shift from problem-focus to family resilience","Co-create individualized action plans with families"],
     speakers:[{initials:"CG",name:"Colleen Gibley-Reed",org:"Illuminate Colorado",title:"Director of Education",bio:"Former Kempe Center Faculty Instructor with 19 years in Larimer County child welfare. Leads education programming at Illuminate Colorado, equipping practitioners to help families thrive.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/f44828c03f9949b4b8725f7f99745154.jpg"}]
   },
-  {
-    time:"7:00 AM – 10:30 AM MDT",
-    fullTitle:"Belonging-focused Foster Care",
-    presenter:"Andrew Turnell & Anna Stromberg · Born to Belong",
-    desc:"A practical, belonging-focused vision for transforming foster care by bringing carers, parents, and extended family together to work collaboratively — grounded in real case examples where fostering has been a true collaboration.",
-    takeaways:["Explore a detailed vision of belonging-focused collaborative foster care","Practice foster care recruitment and support that enables carer-family partnership","Develop carer and family collaboration practices through case-based exercises","Envision revised family time and initial placement activities that prioritize connection"],
-    speakers:[{initials:"AT",name:"Andrew Turnell, AM",org:"Born to Belong",title:"Director · Social Work Professor of Practice, Univ. of Cumbria",bio:"Principal co-creator of Signs of Safety; internationally renowned for applying safety-organised practice to statutory child protection. Currently works with agencies across England, Europe, Canada, and beyond.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/7464efdc944f405c86ac7cab697ff19c.png"},{initials:"AS",name:"Anna Stromberg",org:"Södertalje Children's Services",title:"Foster Carer & Social Worker",bio:"Social worker with extensive experience in children's services including six years in Myanmar. Has been a committed foster carer in Sweden for 15 years, partnering with parents in every placement."}]
-  }
 ];
 
 const siGrid   = document.getElementById("siGrid");
