@@ -411,10 +411,10 @@ const institutes = [
   },
   {
     time:"7:00 AM – 10:30 AM MDT",
-    fullTitle:"Amplifying Unheard Voices: Practical Skills for Power-Sharing and Lived Expertise in Child Welfare",
+    fullTitle:"Holding Space for Family Leadership — Whose Meeting Is This, Anyway?",
     presenter:"Sharon Inglis · Circles",
-    desc:"Develop practical facilitation skills for power-sharing and lived expertise in child welfare. Practice facilitation moves that shift from professional discourse to shared dialogue and amplify unheard voices.",
-    takeaways:["Use facilitation moves that shift toward shared dialogue","Amplify lived expertise and unheard voices in decision-making","Prepare families for leadership, participation, and safety","Practice respectful challenge while maintaining relationship and dignity"],
+    desc:"This Skill Building Institute explores how to protect family leadership in family-led decision making while avoiding “helpful filtering” that can shape who is invited, what gets discussed, and whose voices are included. Built around real examples participants are currently struggling with, the session will guide participants through a simple preparation process and practical facilitation strategies that help families shape the meeting, lead the plan, and keep professionals engaged with the plan that emerges.",
+    takeaways:["Protect family leadership in family-led decision making","Recognize and interrupt helpful filtering","Widen the circle beyond only the safe or easy voices","Practice facilitation strategies that keep professionals engaged"],
     speakers:[{initials:"SI",name:"Sharon Inglis",org:"Circles Training & Consultancy",title:"Director",bio:"25+ years specializing in family group conferences and restorative approaches. Supports children's services in making the shift from procedural practice to true partnership.",photo:"https://custom.cvent.com/AE944F71438646268B70FF5BF3772347/files/event/e7d15afcf2b14901ab0272ce8a401899/fb537cda9e16421abe5e3946c5057638.jpg"}]
   },
   {
