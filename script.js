@@ -289,8 +289,8 @@ function updatePrice() {
     else if (groupSize >= 30) shell.classList.add("tierMedium");
     else                      shell.classList.add("tierSmall");
 
-    const halfSkills = clampNumber(groupHalfSkillsInput, 0, groupSize);
-    const fullSkills = clampNumber(groupFullSkillsInput, 0, groupSize);
+    const halfSkills = clampNumber(groupHalfSkillsInput, 0, 50);
+    const fullSkills = clampNumber(groupFullSkillsInput, 0, 50);
     const groupCeus  = ceuInput.checked ? clampNumber(groupCeusInput, 0, 15) : 0;
 
     groupHalfSkillsInput.closest(".skillOptionLine").querySelector(".skillBtn")
