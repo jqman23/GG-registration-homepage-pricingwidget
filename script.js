@@ -9,6 +9,9 @@ const skillView          = document.getElementById("skillView");
 const shell              = document.getElementById("ggWidgetShell");
 const calcLeft           = document.getElementById("calcLeft");
 
+const EARLY_BIRD_DEADLINE = new Date("2026-08-03T00:00:00");
+function isEarlyBirdActive() { return new Date() < EARLY_BIRD_DEADLINE; }
+
 const earlyBirdInput      = document.getElementById("earlyBird");
 const studentInput        = document.getElementById("student");
 const livedInput          = document.getElementById("lived");
@@ -65,7 +68,7 @@ resetBtn.addEventListener("click", resetToDefaults);
 function resetToDefaults() {
   globalRegistration.checked = true;
   skillRegistration.checked  = false;
-  earlyBirdInput.checked     = true;
+  earlyBirdInput.checked     = isEarlyBirdActive();
   studentInput.checked       = false;
   livedInput.checked         = false;
   ceuInput.checked           = false;
@@ -114,7 +117,7 @@ globalRegistration.addEventListener("click", () => {
     globalRegistration.checked = true;
     skillRegistration.checked = false;
   }
-  if (globalRegistration.checked) earlyBirdInput.checked = true;
+  if (globalRegistration.checked && isEarlyBirdActive()) earlyBirdInput.checked = true;
   updatePrice();
 });
 
@@ -193,7 +196,7 @@ function updatePrice() {
     studentInput.parentElement.setAttribute("data-tooltip", "Student Discounts do not typically factor into Group Registration pricing.");
     livedInput.parentElement.setAttribute("data-tooltip", "Lived Experience Scholarships apply to individual registrations.");
 
-    earlyBirdInfo.setAttribute("data-tooltip", "A 10% Early Bird discount is automatically applied to any 10+ group that completes the registration form before July 31. To complete the registration form groups only need to submit basic information about their organization.");
+    earlyBirdInfo.setAttribute("data-tooltip", "A 10% Early Bird discount is automatically applied to any 10+ group that completes the registration form before August 2. To complete the registration form groups only need to submit basic information about their organization.");
     ceuInfo.setAttribute("data-tooltip", "Select how many group members will claim CEUs. CEUs cost $50 per registrant.");
 
   } else {
@@ -213,7 +216,7 @@ function updatePrice() {
     studentInput.parentElement.removeAttribute("data-tooltip");
     livedInput.parentElement.removeAttribute("data-tooltip");
 
-    earlyBirdInfo.setAttribute("data-tooltip", "Participants have until July 31st to take advantage of the 10% Early Bird Discount.");
+    earlyBirdInfo.setAttribute("data-tooltip", "Participants have until August 2nd to take advantage of the 10% Early Bird Discount.");
     ceuInfo.setAttribute("data-tooltip", "Any number of CEUs can be earned at the Global Gathering for a flat $50 fee.");
 
     document.querySelectorAll(".skillBtn").forEach(btn => btn.classList.remove("hasQty"));
@@ -273,6 +276,15 @@ function updatePrice() {
 
     ceuInput.parentElement.querySelector(".infoIcon")
       .setAttribute("data-tooltip", "Any number of CEUs can be earned at the Global Gathering for a flat $50 fee.");
+  }
+
+  /* ── Early Bird offer has ended ── */
+  if (!isEarlyBirdActive()) {
+    earlyBirdInput.checked  = false;
+    earlyBirdInput.disabled = true;
+    earlyBirdInput.parentElement.classList.add("disabled");
+    earlyBirdInput.parentElement.setAttribute("data-tooltip", "The Early Bird Discount ended August 2.");
+    earlyBirdInfo.setAttribute("data-tooltip", "The Early Bird Discount ended August 2.");
   }
 
   let price = 0;
