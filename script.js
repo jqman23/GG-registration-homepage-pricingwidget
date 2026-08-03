@@ -196,7 +196,7 @@ function updatePrice() {
     studentInput.parentElement.setAttribute("data-tooltip", "Student Discounts do not typically factor into Group Registration pricing.");
     livedInput.parentElement.setAttribute("data-tooltip", "Lived Experience Scholarships apply to individual registrations.");
 
-    earlyBirdInfo.setAttribute("data-tooltip", "A 10% Early Bird discount is automatically applied to any 10+ group that completes the registration form before August 2. To complete the registration form groups only need to submit basic information about their organization.");
+    earlyBirdInfo.setAttribute("data-tooltip", "The 10% Early-Bird discount ended on August 2nd.");
     ceuInfo.setAttribute("data-tooltip", "Select how many group members will claim CEUs. CEUs cost $50 per registrant.");
 
   } else {
@@ -281,8 +281,8 @@ function updatePrice() {
   /* ── Early Bird offer has ended (grayed out, but still selectable) ── */
   if (!isEarlyBirdActive()) {
     earlyBirdInput.parentElement.classList.add("expired");
-    earlyBirdInput.parentElement.setAttribute("data-tooltip", "Looks like you just missed it — the Early Bird Discount had a deadline of August 2nd.");
-    earlyBirdInfo.setAttribute("data-tooltip", "Looks like you just missed it — the Early Bird Discount had a deadline of August 2nd.");
+    earlyBirdInput.parentElement.setAttribute("data-tooltip", "The 10% Early-Bird discount ended on August 2nd.");
+    earlyBirdInfo.setAttribute("data-tooltip", "The 10% Early-Bird discount ended on August 2nd.");
   } else {
     earlyBirdInput.parentElement.classList.remove("expired");
   }
