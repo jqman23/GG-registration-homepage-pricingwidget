@@ -278,13 +278,13 @@ function updatePrice() {
       .setAttribute("data-tooltip", "Any number of CEUs can be earned at the Global Gathering for a flat $50 fee.");
   }
 
-  /* ── Early Bird offer has ended ── */
+  /* ── Early Bird offer has ended (grayed out, but still selectable) ── */
   if (!isEarlyBirdActive()) {
-    earlyBirdInput.checked  = false;
-    earlyBirdInput.disabled = true;
-    earlyBirdInput.parentElement.classList.add("disabled");
-    earlyBirdInput.parentElement.setAttribute("data-tooltip", "The Early Bird Discount ended August 2.");
-    earlyBirdInfo.setAttribute("data-tooltip", "The Early Bird Discount ended August 2.");
+    earlyBirdInput.parentElement.classList.add("expired");
+    earlyBirdInput.parentElement.setAttribute("data-tooltip", "Looks like you just missed it — the Early Bird Discount had a deadline of August 2nd.");
+    earlyBirdInfo.setAttribute("data-tooltip", "Looks like you just missed it — the Early Bird Discount had a deadline of August 2nd.");
+  } else {
+    earlyBirdInput.parentElement.classList.remove("expired");
   }
 
   let price = 0;
@@ -555,6 +555,7 @@ function openInstitute(i, tile) {
 }
 
 /* ── INIT ── */
+earlyBirdInput.checked = isEarlyBirdActive();
 updatePrice();
 document.getElementById("skillCountSection").style.display = "none";
 
