@@ -196,6 +196,9 @@ function updatePrice() {
     studentInput.parentElement.setAttribute("data-tooltip", "Student Discounts do not typically factor into Group Registration pricing.");
     livedInput.parentElement.setAttribute("data-tooltip", "Lived Experience Scholarships apply to individual registrations.");
 
+    earlyBirdInput.disabled = false;
+    earlyBirdInput.parentElement.classList.remove("disabled");
+    earlyBirdInput.parentElement.removeAttribute("data-tooltip");
     earlyBirdInfo.setAttribute("data-tooltip", "The 10% Early-Bird discount ended on August 2nd.");
     ceuInfo.setAttribute("data-tooltip", "Select how many group members will claim CEUs. CEUs cost $50 per registrant.");
 
