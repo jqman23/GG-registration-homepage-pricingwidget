@@ -117,7 +117,7 @@ globalRegistration.addEventListener("click", () => {
     globalRegistration.checked = true;
     skillRegistration.checked = false;
   }
-  if (globalRegistration.checked && isEarlyBirdActive()) earlyBirdInput.checked = true;
+  if (globalRegistration.checked) earlyBirdInput.checked = isEarlyBirdActive();
   updatePrice();
 });
 
@@ -196,9 +196,6 @@ function updatePrice() {
     studentInput.parentElement.setAttribute("data-tooltip", "Student Discounts do not typically factor into Group Registration pricing.");
     livedInput.parentElement.setAttribute("data-tooltip", "Lived Experience Scholarships apply to individual registrations.");
 
-    earlyBirdInput.disabled = false;
-    earlyBirdInput.parentElement.classList.remove("disabled");
-    earlyBirdInput.parentElement.removeAttribute("data-tooltip");
     earlyBirdInfo.setAttribute("data-tooltip", "The 10% Early-Bird discount ended on August 2nd.");
     ceuInfo.setAttribute("data-tooltip", "Select how many group members will claim CEUs. CEUs cost $50 per registrant.");
 
@@ -219,7 +216,7 @@ function updatePrice() {
     studentInput.parentElement.removeAttribute("data-tooltip");
     livedInput.parentElement.removeAttribute("data-tooltip");
 
-    earlyBirdInfo.setAttribute("data-tooltip", "Participants have until August 2nd to take advantage of the 10% Early Bird Discount.");
+    earlyBirdInfo.setAttribute("data-tooltip", "The 10% Early-Bird discount ended on August 2nd.");
     ceuInfo.setAttribute("data-tooltip", "Any number of CEUs can be earned at the Global Gathering for a flat $50 fee.");
 
     document.querySelectorAll(".skillBtn").forEach(btn => btn.classList.remove("hasQty"));
@@ -279,15 +276,6 @@ function updatePrice() {
 
     ceuInput.parentElement.querySelector(".infoIcon")
       .setAttribute("data-tooltip", "Any number of CEUs can be earned at the Global Gathering for a flat $50 fee.");
-  }
-
-  /* ── Early Bird offer has ended (grayed out, but still selectable) ── */
-  if (!isEarlyBirdActive()) {
-    earlyBirdInput.parentElement.classList.add("expired");
-    earlyBirdInput.parentElement.setAttribute("data-tooltip", "The 10% Early-Bird discount ended on August 2nd.");
-    earlyBirdInfo.setAttribute("data-tooltip", "The 10% Early-Bird discount ended on August 2nd.");
-  } else {
-    earlyBirdInput.parentElement.classList.remove("expired");
   }
 
   let price = 0;
